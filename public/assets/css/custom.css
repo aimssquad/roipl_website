@@ -1,0 +1,5 @@
+.footer-links a.active {
+    color: #4eb478 !important;
+    font-weight: bold;
+    /* text-decoration: underline; */
+}
