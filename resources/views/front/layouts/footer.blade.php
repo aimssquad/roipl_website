@@ -24,7 +24,7 @@
             <div class="col-lg-2 col-md-3 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
-                    <li><a href="#" class="{{ Request::is('gallery') ? 'active' : '' }}">Gallery</a></li>
+                    <li><a href="{{ route('gallery') }}" class="{{ Route::currentRouteName() == 'gallery' ? 'active' : '' }}" class="{{ Request::is('gallery') ? 'active' : '' }}">Gallery</a></li>
                     <li><a href="#" class="{{ Request::is('careers') ? 'active' : '' }}">Careers</a></li>
                     <li><a href="#" class="{{ Request::is('csr') ? 'active' : '' }}">CSR</a></li>
                     <li><a href="{{ route('contact') }}" class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact Us</a></li>
