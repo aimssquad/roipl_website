@@ -20,3 +20,4 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/event-details', 'eventDetails')->name('event-details');
 });
 
+require __DIR__.'/admin.php';
