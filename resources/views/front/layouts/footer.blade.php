@@ -2,8 +2,12 @@
     <div class="container footer-top">
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
-                <a href="#" class="logo d-flex align-items-center">
+                {{-- <a href="#" class="logo d-flex align-items-center">
                     <span class="sitename">ROIPL</span>
+                </a> --}}
+                <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+                    <img src="{{ asset('assets/img/ronaklogo.png') }}" alt="">
+                    {{-- <h1 class="sitename">ROIPL</h1> --}}
                 </a>
                 <div class="footer-contact pt-3">
                     <p>789 Anandapur Main Road</p>

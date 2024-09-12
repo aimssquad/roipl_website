@@ -14,10 +14,6 @@ class HomeController extends Controller
         return view($this->prefix.'home');
 
     }
-    public function contact(Request $request){
-        return view($this->prefix.'contact');
-
-    }
     public function about(Request $request){
         return view($this->prefix.'about');
 

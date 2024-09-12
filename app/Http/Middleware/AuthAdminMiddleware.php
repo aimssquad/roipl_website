@@ -16,6 +16,7 @@ class AuthAdminMiddleware
      */
     public function handle(Request $request, Closure $next, ...$roles): Response
     {
+        // dd($roles);
         if(Auth::check() && Auth::user()->hasAnyRole($roles)){
             return $next($request);
         }else{
