@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\ExportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\LoginController;
@@ -39,6 +40,8 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
     Route::resource('permissions', PermissionController::class)->except(['show']);
     Route::resource('users', UserController::class)->except(['show']);
     Route::resource('contacts', ContactController::class)->except(['show']);
+    Route::post('/contacts/update-status', [ContactController::class, 'updateStatus'])->name('contacts.updateStatus');
+    Route::post('/export-table-data', [ExportController::class, 'exportTableData'])->name('exportTableData');
 });
 });
 

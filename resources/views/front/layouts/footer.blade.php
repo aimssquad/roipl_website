@@ -9,7 +9,7 @@
                     <img src="{{ asset('assets/img/ronaklogo.png') }}" alt="">
                     {{-- <h1 class="sitename">ROIPL</h1> --}}
                 </a>
-                <div class="footer-contact pt-3">
+                <div class="footer-contact">
                     <p>789 Anandapur Main Road</p>
                     <p>Biowonder, Eastern Metropolitan Bypass Rd</p>
                     <p>East Kolkata Twp, Kolkata</p>

@@ -7,7 +7,7 @@
     <meta name="keywords" content="@yield('meta_keywords', 'Default keywords')">
 
     <!-- Favicons -->
-    <link href="{{ asset('admin/assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('admin/assets/img/favicon.ico') }}" rel="icon">
     <link href="{{ asset('admin/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -22,6 +22,7 @@
     <link href="{{ asset('admin/assets/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
+
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('admin/assets/css/style.css') }}" rel="stylesheet">

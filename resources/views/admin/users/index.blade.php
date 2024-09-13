@@ -51,8 +51,8 @@
                                     </td>
                                     <td>
                                         <!-- Edit Button -->
-                                        <a href="{{ route('admin.users.edit', $data->id) }}" class="btn btn-primary btn-sm">
-                                            <i class="bi bi-pencil-square"></i> Edit
+                                        <a href="{{ route('admin.users.edit', $data->id) }}" class="btn btn-primary btn-sm" title="Edit">
+                                            <i class="bi bi-pencil-square"></i>
                                         </a>
 
                                         <!-- Delete Form -->
@@ -60,7 +60,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this data?')">
-                                                <i class="bi bi-trash"></i> Delete
+                                                <i class="bi bi-trash" title="Delete"></i>
                                             </button>
                                         </form>
                                     </td>
