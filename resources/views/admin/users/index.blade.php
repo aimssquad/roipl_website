@@ -12,10 +12,24 @@
         </ol>
     </nav>
 </div>
-<div class="mb-3">
-    <a href="{{ route('admin.users.create') }}" class="btn btn-success">
-        <i class="bi bi-plus-circle"></i> Create New Users
-    </a>
+
+<div class="row">
+    <div class="col-lg-3 d-flex justify-content-start mb-3">
+        <a href="{{ route('admin.users.create') }}" class="btn btn-success me-2">
+            <i class="bi bi-plus-circle"></i> Create New Users
+        </a>
+    </div>
+    <div class="col-lg-3 d-flex justify-content-start mb-3">
+        <form action="{{ route('admin.exportTableData') }}" method="POST" id="exportForm">
+            @csrf
+            <input type="hidden" name="data" id="data">
+            <input type="hidden" name="headings" id="headings">
+            <input type="hidden" name="filename" id="filename">
+            <input type="hidden" id="filenameInput" value="users">
+
+            <button type="submit" class="btn btn-primary btn-sm">Export to Excel</button>
+        </form>
+    </div>
 </div>
 
 @include('admin.partials.message')
@@ -26,7 +40,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">User List</h5>
-                    <table class="table datatable">
+                    <table class="table datatable" id="myTable">
                         <thead>
                             <tr>
                                 <th>Sl No</th>

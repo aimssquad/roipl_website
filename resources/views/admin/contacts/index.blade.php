@@ -18,12 +18,16 @@
     </a>
 </div> --}}
 <div class="mb-3">
-<form action="{{ route('admin.exportTableData') }}" method="POST" id="exportForm">
-    @csrf
-    <input type="hidden" name="data" id="data">
-    <input type="hidden" name="headings" id="headings">
-    <button type="submit" class="btn btn-primary btn-sm">Export to Excel</button>
-</form>
+    <form action="{{ route('admin.exportTableData') }}" method="POST" id="exportForm">
+        @csrf
+        <input type="hidden" name="data" id="data">
+        <input type="hidden" name="headings" id="headings">
+        <input type="hidden" name="filename" id="filename">
+
+        <input type="text" id="filenameInput" placeholder="Enter file name" required>
+
+        <button type="submit" class="btn btn-primary btn-sm">Export to Excel</button>
+    </form>
 </div>
 
 @include('admin.partials.message')
@@ -34,7 +38,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Contacts List</h5>
-                    <table class="table datatable" id="myTable">
+                    <table class="table table-striped datatable" id="myTable">
                         <thead>
                             <tr>
                                 <th>Sl No</th>
@@ -93,37 +97,8 @@
 
 @section('script')
 
-<script>
-    $(document).ready(function() {
-        $('#exportForm').on('submit', function(e) {
-            // Prevent form submission until data is collected
-            e.preventDefault();
 
-            let tableData = [];
-            let tableHeadings = [];
 
-            // Collect table headings
-            $('#myTable thead th').each(function() {
-                tableHeadings.push($(this).text());
-            });
 
-            // Collect table data
-            $('#myTable tbody tr').each(function() {
-                let row = [];
-                $(this).find('td').each(function() {
-                    row.push($(this).text());
-                });
-                tableData.push(row);
-            });
-
-            // Set the form inputs with collected data
-            $('#data').val(JSON.stringify(tableData));
-            $('#headings').val(JSON.stringify(tableHeadings));
-
-            // Submit the form after data is set
-            $(this).off('submit').submit();
-        });
-    });
-</script>
 
 @endsection

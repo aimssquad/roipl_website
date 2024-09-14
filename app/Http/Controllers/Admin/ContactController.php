@@ -68,7 +68,14 @@ class ContactController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = Contact::findOrFail($id);
+
+        // Check if the role can be deleted (optional, based on business rules)
+        if ($data->name == 'Dashboard') {
+            return redirect()->route($this->prefix.'index')->with('error', 'Cannot delete the dashboard.');
+        }
+        $data->delete();
+        return redirect()->route($this->prefix.'index')->with('success', 'Data deleted successfully.');
     }
 
     public function updateStatus(Request $request)

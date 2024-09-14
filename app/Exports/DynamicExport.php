@@ -1,32 +1,39 @@
 <?php
-
 namespace App\Exports;
 
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
-use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\WithStyles;
+use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use PhpOffice\PhpSpreadsheet\Style\Fill;
 
-class DynamicExport implements FromCollection, WithHeadings
+class DynamicExport implements FromCollection, WithHeadings, WithStyles
 {
     protected $data;
     protected $headings;
-
-    // Constructor to accept data and headings
     public function __construct($data, $headings)
     {
         $this->data = $data;
         $this->headings = $headings;
     }
-
-    // Return the data as a collection
     public function collection()
     {
         return collect($this->data);
     }
-
-    // Return the headings for the columns
     public function headings(): array
     {
         return $this->headings;
+    }
+    public function styles(Worksheet $sheet)
+    {
+        return [
+            1 => [
+                'font' => ['bold' => true],
+                'fill' => [
+                    'fillType' => Fill::FILL_SOLID,
+                    'startColor' => ['argb' => 'FFFF00'],
+                ],
+            ],
+        ];
     }
 }

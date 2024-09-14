@@ -3,19 +3,19 @@
 @section('content')
 
 <div class="pagetitle">
-    <h1>Manage Permission</h1>
+    <h1>Manage Events</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-            <li class="breadcrumb-item">Permissions</li>
-            <li class="breadcrumb-item active">Manage Permission</li>
+            <li class="breadcrumb-item">Events</li>
+            <li class="breadcrumb-item active">Manage Events</li>
         </ol>
     </nav>
 </div>
 <div class="row">
     <div class="col-lg-3 d-flex justify-content-start mb-3">
-        <a href="{{ route('admin.permissions.create') }}" class="btn btn-success me-2">
-            <i class="bi bi-plus-circle"></i> Create New Permission
+        <a href="{{ route('admin.events.create') }}" class="btn btn-success me-2">
+            <i class="bi bi-plus-circle"></i> Create New Events
         </a>
     </div>
     <div class="col-lg-3 d-flex justify-content-start mb-3">
@@ -24,7 +24,7 @@
             <input type="hidden" name="data" id="data">
             <input type="hidden" name="headings" id="headings">
             <input type="hidden" name="filename" id="filename">
-            <input type="hidden" id="filenameInput" value="permission">
+            <input type="hidden" id="filenameInput" value="Events">
 
             <button type="submit" class="btn btn-primary btn-sm">Export to Excel</button>
         </form>
@@ -55,12 +55,12 @@
                                     <td>{{ $data->name }}</td>
                                     <td>
                                         <!-- Edit Button -->
-                                        <a href="{{ route('admin.permissions.edit', $data->id) }}" class="btn btn-primary btn-sm">
+                                        <a href="{{ route('admin.events.edit', $data->id) }}" class="btn btn-primary btn-sm">
                                             <i class="bi bi-pencil-square"></i> Edit
                                         </a>
 
                                         <!-- Delete Form -->
-                                        <form action="{{ route('admin.permissions.destroy', $data->id) }}" method="POST" style="display:inline-block;">
+                                        <form action="{{ route('admin.events.destroy', $data->id) }}" method="POST" style="display:inline-block;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this data?')">
