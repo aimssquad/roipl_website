@@ -1,0 +1,32 @@
+#imagePreviewContainer {
+        position: relative;
+        display: none;
+        max-width: 200px; /* Set a maximum width for the preview */
+    }
+
+    #imagePreview {
+        width: 100%; /* Make sure the image fits within the container */
+        height: auto;
+        border: 1px solid #ddd; /* Optional: Add a border around the image */
+    }
+
+    #removeImageIcon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #removeImageIcon i {
+        color: red; /* Color of the close icon */
+    }
+
+    #removeImageIcon:hover {
+        background-color: rgba(255, 0, 0, 0.8); /* Make background red on hover */
+        color: white;
+    }
+

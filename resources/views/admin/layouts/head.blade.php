@@ -27,5 +27,6 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('admin/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/assets/css/customize.css') }}" rel="stylesheet">
     @yield('css')
 </head>

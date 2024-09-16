@@ -14,6 +14,9 @@
 <script src="{{ asset('admin/assets/js/main.js') }}"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<!-- CKEditor 5 CDN -->
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+
 <script>
     $('#myTable').DataTable({
             searching: true,
@@ -63,4 +66,20 @@
         });
     });
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        ClassicEditor
+            .create(document.querySelector('#inputEventDescription'))
+            .then(editor => {
+                editor.ui.view.editable.element.style.minHeight = '200px';
+
+                // Ensure the editor's content is added to the form before submission
+                document.querySelector('form').addEventListener('submit', function() {
+                    document.querySelector('#inputEventDescription').value = editor.getData();
+                });
+            })
+    });
+</script>
+
+
 @yield('script')

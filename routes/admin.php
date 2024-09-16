@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\EventImageController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ExportController;
@@ -37,10 +38,12 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
     Route::resource('abouts', AboutController::class)->except(['show']);
     Route::resource('brands', BrandController::class)->except(['show']);
     Route::resource('events', EventController::class)->except(['show']);
+    Route::delete('/events/images/{image}', [EventImageController::class, 'destroy'])->name('events.images.destroy');
     Route::resource('permissions', PermissionController::class)->except(['show']);
     Route::resource('users', UserController::class)->except(['show']);
     Route::resource('contacts', ContactController::class)->except(['show']);
     Route::post('/contacts/update-status', [ContactController::class, 'updateStatus'])->name('contacts.updateStatus');
+
     Route::post('/export-table-data', [ExportController::class, 'exportTableData'])->name('exportTableData');
 });
 });

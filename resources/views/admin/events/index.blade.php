@@ -39,12 +39,16 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Permission List</h5>
+                    <h5 class="card-title">Events List</h5>
                     <table class="table datatable" id="myTable">
                         <thead>
                             <tr>
                                 <th>Sl No</th>
-                                <th>Name</th>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Place</th>
+                                <th>Image</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -52,7 +56,17 @@
                             @foreach($datas as $index => $data)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
-                                    <td>{{ $data->name }}</td>
+                                    <td>{{ $data->title }}</td>
+                                    <td>{{ $data->event_date }}</td>
+                                    <td>{{ $data->event_time }}</td>
+                                    <td>{{ $data->place }}</td>
+                                    <td>
+                                        @if($data->image)
+                                            <img src="{{ asset('storage/'.$data->image) }}" alt="Event Image" style="max-width: 50px;">
+                                        @else
+                                            No image
+                                        @endif
+                                    </td>
                                     <td>
                                         <!-- Edit Button -->
                                         <a href="{{ route('admin.events.edit', $data->id) }}" class="btn btn-primary btn-sm">
