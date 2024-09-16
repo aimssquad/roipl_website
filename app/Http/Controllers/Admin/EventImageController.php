@@ -14,8 +14,8 @@ class EventImageController extends Controller
 
         if ($image) {
             // Delete the image file from storage if needed
-            if (file_exists(storage_path('app/public/events/' . $image->file_name))) {
-                unlink(storage_path('app/public/events/' . $image->file_name));
+            if (file_exists(storage_path('app/public/event_images/' . $image->file_name))) {
+                unlink(storage_path('app/public/event_images/' . $image->file_name));
             }
 
             // Delete the image record from the database

@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function __construct(){
         $this->prefix = 'front.';
     }
-    public function index(Request $request){
+    public function index(){
         return view($this->prefix.'home');
 
     }
