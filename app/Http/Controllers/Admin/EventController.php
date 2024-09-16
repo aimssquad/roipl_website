@@ -137,15 +137,6 @@ class EventController extends Controller
         return redirect()->route($this->prefix.'index')->with('success', 'Event deleted successfully.');
     }
 
-    public function destroyImage($id)
-    {
-        $image = EventImage::findOrFail($id);
-        // if (Storage::disk('app/public/event_images/')->exists($image->image)) {
-        //     Storage::disk('app/public/event_images/')->delete($image->image);
-        // }
-        $image->delete();
 
-        return redirect()->back()->with('success', 'Image deleted successfully.');
-    }
 
 }
