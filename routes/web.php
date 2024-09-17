@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get('/', 'index')->name('index');
+    Route::get('/home', 'index')->name('index');
     Route::get('/visionnaire', 'visionnaire')->name('visionnaire');
     Route::get('/about', 'about')->name('about');
     Route::get('/brands', 'brands')->name('brands');
