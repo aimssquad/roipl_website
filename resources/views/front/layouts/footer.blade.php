@@ -64,9 +64,9 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Ronak Optical</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Ronak Optik India Pvt. Ltd.</strong> <span>All Rights Reserved</span></p>
         <div class="credits">
-            Designed by <a href="#">Ronak Optical</a>
+            Designed by <a href="#">Ronak Optik India Pvt. Ltd.</a>
         </div>
     </div>
 </footer>
