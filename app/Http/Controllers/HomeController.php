@@ -42,4 +42,7 @@ class HomeController extends Controller
         return view($this->prefix.'visionnaire');
 
     }
+    public function teams(Request $request){
+        return view($this->prefix.'teams');
+    }
 }

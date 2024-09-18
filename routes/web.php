@@ -8,9 +8,10 @@ use App\Http\Controllers\HomeController;
 Route::controller(HomeController::class)->group(function () {
     Route::get('/home', 'index')->name('index');
     Route::get('/visionnaire', 'visionnaire')->name('visionnaire');
-    Route::get('/about', 'about')->name('about');
+    Route::get('/our story', 'about')->name('about');
     Route::get('/brands', 'brands')->name('brands');
-    Route::get('/events', 'events')->name('events');
+    Route::get('/life of ROIPL', 'events')->name('events');
+    Route::get('/teams', 'teams')->name('teams');
     Route::get('/gallery', 'gallery')->name('gallery');
     Route::get('/gallery-details', 'galleryDetails')->name('gallery-details');
     Route::get('/event-details', 'eventDetails')->name('event-details');

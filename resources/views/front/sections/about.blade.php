@@ -1,32 +1,54 @@
 <section id="about" class="about section">
     <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">About</span>
-        <h2>About</h2>
+        <span class="description-title">About Us</span>
+        <h2>About Us</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
     </div>
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <h3>Voluptatem dignissimos provident laboris nisi ut aliquip ex ea commodo</h3>
-                <img src="{{ asset('assets/img/about.jpg') }}" class="img-fluid rounded-4 mb-4" alt="">
-                <p>Ut fugiat ut sunt quia veniam...</p>
-                <p>Temporibus nihil enim deserunt sed ea...</p>
-            </div>
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-                <div class="content ps-0 ps-lg-5">
-                    <p class="fst-italic">Lorem ipsum dolor sit amet...</p>
-                    <ul>
-                        <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip...</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit...</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip...</li>
-                    </ul>
-                    <p>Ullamco laboris nisi ut aliquip...</p>
-                    <div class="position-relative mt-4">
-                        <img src="{{ asset('assets/img/about-2.jpg') }}" class="img-fluid rounded-4" alt="">
-                        <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
-                    </div>
-                </div>
-            </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 25000
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 0
+                },
+                "768": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/recent-photos/recent-photos-1.jpg"><img src="assets/img/recent-photos/recent-photos-1.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/recent-photos/recent-photos-2.jpg"><img src="assets/img/recent-photos/recent-photos-2.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/recent-photos/recent-photos-3.jpg"><img src="assets/img/recent-photos/recent-photos-3.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/recent-photos/recent-photos-4.jpg"><img src="assets/img/recent-photos/recent-photos-4.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/recent-photos/recent-photos-5.jpg"><img src="assets/img/recent-photos/recent-photos-5.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/recent-photos/recent-photos-6.jpg"><img src="assets/img/recent-photos/recent-photos-6.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/recent-photos/recent-photos-7.jpg"><img src="assets/img/recent-photos/recent-photos-7.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/recent-photos/recent-photos-8.jpg"><img src="assets/img/recent-photos/recent-photos-8.jpg" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-    </div>
+
+      </div>
 </section>
