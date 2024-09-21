@@ -96,7 +96,8 @@
   @section('script')
 <script>
  document.getElementById('refresh-captcha').addEventListener('click', function() {
-    fetch('/refresh-captcha')
+    var url = "{{ url('/refresh-captcha') }}";
+    fetch(url)
         .then(response => response.json())
         .then(data => {
             // Update the captcha image src with the new one
