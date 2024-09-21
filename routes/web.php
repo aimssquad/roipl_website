@@ -27,7 +27,11 @@ Route::get('/get-cities', [LocationController::class, 'getCities'])->name('get.c
 Route::resource('careers', CareerController::class);
 
 // for captcha
-Route::get('/refresh-captcha', function () {
-    return response()->json(['captcha' => captcha_src()]);
+// Route::get('/refresh-captcha', function () {
+//     return response()->json(['captcha' => captcha_src()]);
+// });
+
+Route::get('/refresh-captcha', function() {
+    return response()->json(['captcha' => captcha_src('math')]);
 });
 require __DIR__.'/admin.php';
