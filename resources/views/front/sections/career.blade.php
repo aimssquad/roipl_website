@@ -109,7 +109,8 @@ document.getElementById('state').addEventListener('change', function() {
     var stateId = this.value;
 
     if (stateId) {
-        fetch('/get-cities?state_id=' + stateId)
+        var url = "{{ route('get.cities') }}"; // Dynamically get the correct URL
+        fetch(url + '?state_id=' + stateId)
             .then(response => response.json())
             .then(data => {
                 var citySelect = document.getElementById('city');
@@ -127,6 +128,7 @@ document.getElementById('state').addEventListener('change', function() {
         document.getElementById('city').innerHTML = '<option value="">Select City</option>';
     }
 });
+
 
 
 
