@@ -70,7 +70,7 @@
             </div>
 
             <!-- CAPTCHA Section -->
-            {{-- <div class="col-md-6">
+            <div class="col-md-6">
                 <label for="captcha">CAPTCHA</label>
                 <input type="text" id="captcha" name="captcha" class="form-control" required>
             </div>
@@ -79,7 +79,7 @@
                     <img src="{!! captcha_src() !!}" id="captcha-img" alt="captcha">
                 </div>
                 <button type="button" id="refresh-captcha" class="btn btn-sm btn-secondary">Refresh CAPTCHA</button>
-            </div> --}}
+            </div>
 
             <!-- Submit Button -->
             <div class="col-md-12 text-center">
@@ -95,15 +95,15 @@
 
   @section('script')
 <script>
-//  document.getElementById('refresh-captcha').addEventListener('click', function() {
-//     fetch('/refresh-captcha')
-//         .then(response => response.json())
-//         .then(data => {
-//             // Update the captcha image src with the new one
-//             document.getElementById('captcha-img').src = data.captcha + '?' + Date.now();
-//         })
-//         .catch(error => console.error('Error refreshing CAPTCHA:', error));
-// });
+ document.getElementById('refresh-captcha').addEventListener('click', function() {
+    fetch('/refresh-captcha')
+        .then(response => response.json())
+        .then(data => {
+            // Update the captcha image src with the new one
+            document.getElementById('captcha-img').src = data.captcha + '?' + Date.now();
+        })
+        .catch(error => console.error('Error refreshing CAPTCHA:', error));
+});
 
 document.getElementById('state').addEventListener('change', function() {
     var stateId = this.value;
