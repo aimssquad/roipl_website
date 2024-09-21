@@ -29,7 +29,7 @@
                 <h4>Useful Links</h4>
                 <ul>
                     <li><a href="{{ route('gallery') }}" class="{{ Route::currentRouteName() == 'gallery' ? 'active' : '' }}" class="{{ Request::is('gallery') ? 'active' : '' }}">Gallery</a></li>
-                    <li><a href="#" class="{{ Request::is('careers') ? 'active' : '' }}">Careers</a></li>
+                    <li><a href="{{ route('careers.index') }}" class="{{ Request::is('careers') ? 'active' : '' }}">Careers</a></li>
                     <li><a href="#" class="{{ Request::is('csr') ? 'active' : '' }}">CSR</a></li>
                     <li><a href="{{ route('contact') }}" class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact Us</a></li>
                     <li><a href="#" class="{{ Request::is('team') ? 'active' : '' }}">Team & Board</a></li>

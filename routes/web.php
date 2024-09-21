@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LocationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -21,5 +23,11 @@ Route::controller(ContactController::class)->group(function () {
     Route::get('/contact', 'contact')->name('contact');
     Route::post('/contactus', 'savecontact')->name('contact-save');
 });
+Route::get('/get-cities', [LocationController::class, 'getCities'])->name('get.cities');
+Route::resource('careers', CareerController::class);
 
+// for captcha
+Route::get('/refresh-captcha', function () {
+    return response()->json(['captcha' => captcha_src()]);
+});
 require __DIR__.'/admin.php';
