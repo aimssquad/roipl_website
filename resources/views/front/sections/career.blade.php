@@ -78,7 +78,7 @@
                 <div>
                     <img src="{!! captcha_src() !!}" id="captcha-img" alt="captcha">
                 </div>
-                <button type="button" id="refresh-captcha" class="btn btn-sm btn-secondary">Refresh CAPTCHA</button>
+                <button type="button" id="refresh-captcha" class="btn btn-sm btn-secondary mt-2">Refresh CAPTCHA</button>
             </div>
 
             <!-- Submit Button -->
