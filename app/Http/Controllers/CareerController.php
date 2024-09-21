@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CareerSubmittedToHR;
+use App\Mail\CareerThankYouMail;
 use App\Models\Department;
 use App\Models\State;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCareerRequest;
 use App\Models\Career;
 use Illuminate\Support\Facades\Storage;
+use Mail;
+
+
 
 class CareerController extends Controller
 {
@@ -24,14 +29,13 @@ class CareerController extends Controller
     public function store(StoreCareerRequest $request)
     {
         try {
-            // dd($request->all());
             // Handle CV file upload
             if ($request->hasFile('cv')) {
                 $cvPath = $request->file('cv')->store('cvs', 'public'); // Store the file in the 'cvs' directory
             }
 
             // Create the career entry
-            Career::create([
+            $career = Career::create([
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
                 'city_id' => $request->input('city'),
@@ -41,9 +45,35 @@ class CareerController extends Controller
                 'cv' => $cvPath // Save the CV file path
             ]);
 
+            // Send email to HR
+            $hrEmailData = [
+                'name' => $career->name,
+                'email' => $career->email,
+                'phone_number' => $career->phone_number,
+                'department' => $career->department,
+                'cv_link' => asset('storage/' . $career->cv),
+                // Add any other details you want to include
+            ];
+
+            Mail::send('emails.career_submitted_to_hr', $hrEmailData, function($message) {
+                $message->to('hr@ronakoptik.com') // Admin email
+                        ->subject('New Career Submission');
+            });
+
+            // Send acknowledgment email to the user
+            $userEmailData = [
+                'name' => $career->name,
+            ];
+
+            Mail::send('emails.career_thank_you', $userEmailData, function($message) use ($career) {
+                $message->to($career->email) // User's email
+                        ->subject('Thank you for your career submission!');
+            });
+
             return redirect()->back()->with('success', 'Career details submitted successfully!');
 
         } catch (\Exception $e) {
+            \Log::error('Career submission error: ' . $e->getMessage());
             return redirect()->back()->withErrors(['error' => 'Something went wrong, please try again.']);
         }
     }
