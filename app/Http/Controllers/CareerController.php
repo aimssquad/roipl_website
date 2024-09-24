@@ -45,18 +45,24 @@ class CareerController extends Controller
                 'cv' => $cvPath // Save the CV file path
             ]);
 
+            $department = Department::find($career->department); // Retrieve department based on the stored department ID
+            $departmentName = $department ? $department->department_name : 'Unknown Department';
+
+
+
             // Send email to HR
             $hrEmailData = [
                 'name' => $career->name,
                 'email' => $career->email,
                 'phone_number' => $career->phone_number,
-                'department' => $career->department,
+                'department' => $departmentName,
                 'cv_link' => asset('storage/' . $career->cv),
                 // Add any other details you want to include
             ];
+            // dd($hrEmailData);
 
             Mail::send('emails.career_submitted_to_hr', $hrEmailData, function($message) {
-                $message->to('hr@ronakoptik.com') // Admin email
+                $message->to('abbas.uddin@ronakoptik.com') // Admin email
                         ->subject('New Career Submission');
             });
 
