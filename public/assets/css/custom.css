@@ -61,3 +61,10 @@
     justify-content: center; /* Horizontally center the content */
 }
 
+.section-tilte-team{
+    text-align: center;
+    margin-top: -56px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
