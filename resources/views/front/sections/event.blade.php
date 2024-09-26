@@ -3,7 +3,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="row">
-        <div class="col-md-6 d-flex align-items-stretch">
+        <div class="col-md-4 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
               <img src="{{asset('assets/img/events/events-item-1.jpg')}}" alt="...">
@@ -15,7 +15,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 d-flex align-items-stretch">
+        <div class="col-md-4 d-flex align-items-stretch">
           <div class="card">
             <div class="card-img">
                 <img src="{{asset('assets/img/events/events-item-2.jpg')}}" alt="...">
@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 d-flex align-items-stretch">
+        <div class="col-md-4 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
                 <img src="{{asset('assets/img/events/events-item-1.jpg')}}" alt="...">
