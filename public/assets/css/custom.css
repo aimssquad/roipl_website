@@ -68,3 +68,29 @@
     position: relative;
 }
 
+/* Default desktop style */
+.page-title-brand {
+    background-size: 100% 400%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+  }
+
+  /* Media query for mobile screens */
+  @media (max-width: 768px) {
+    .page-title-brand {
+      background: linear-gradient(to bottom, rgba(0, 0, 0.2, 0.8), transparent), url('https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp') !important;
+      background-size: contain !important; /* Ensures the full image is visible */
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      height: auto !important; /* Adjust height automatically based on content */
+      min-height: 300px !important; /* Set a minimum height to avoid cutting */
+    }
+  }
+
+  .white-text-color{
+    color: #ffffff;
+  }
+
+
+

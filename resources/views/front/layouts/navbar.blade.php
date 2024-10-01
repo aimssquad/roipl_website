@@ -16,7 +16,7 @@
                 <li class="dropdown"><a href="{{ route('visionnaire') }}" class="{{ Route::currentRouteName() == 'visionnaire' ? 'active' : '' }}"><span>Visionnaire</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li><a href="{{ route('visionnaire') }}#events">Road Show</a></li>
-                        <li><a href="{{ route('visionnaire') }}#events">Vission Exclusive</a></li>
+                        <li><a href="{{ route('visionnaire') }}#events">Visionnaire Exclusive</a></li>
                     </ul>
                 <li>
             </ul>

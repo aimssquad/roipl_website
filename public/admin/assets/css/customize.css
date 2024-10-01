@@ -29,4 +29,7 @@
         background-color: rgba(255, 0, 0, 0.8); /* Make background red on hover */
         color: white;
     }
+    .status-dropdown {
+        width: 180px !important; /* Ensure dropdown width is applied */
+    }
 

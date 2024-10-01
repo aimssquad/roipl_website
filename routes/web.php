@@ -26,11 +26,6 @@ Route::controller(ContactController::class)->group(function () {
 Route::get('/get-cities', [LocationController::class, 'getCities'])->name('get.cities');
 Route::resource('careers', CareerController::class);
 
-// for captcha
-// Route::get('/refresh-captcha', function () {
-//     return response()->json(['captcha' => captcha_src()]);
-// });
-
 Route::get('/refresh-captcha', function() {
     return response()->json(['captcha' => captcha_src('math')]);
 });

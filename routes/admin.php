@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\EventImageController;
 use App\Http\Controllers\Admin\PermissionController;
@@ -42,8 +43,9 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
     Route::resource('permissions', PermissionController::class)->except(['show']);
     Route::resource('users', UserController::class)->except(['show']);
     Route::resource('contacts', ContactController::class)->except(['show']);
+    Route::resource('careers', CareerController::class)->except(['show']);
     Route::post('/contacts/update-status', [ContactController::class, 'updateStatus'])->name('contacts.updateStatus');
-
+    Route::post('/careers/update-status', [CareerController::class, 'updateStatus'])->name('careers.updateStatus');
     Route::post('/export-table-data', [ExportController::class, 'exportTableData'])->name('exportTableData');
 });
 });
