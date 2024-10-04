@@ -51,7 +51,7 @@
                 <img src="{{asset('assets/img/vission/ronak-optic-optic-india-vashi-2020-4.jpg')}}" alt="...">
             </div>
             <div class="card-body">
-              <h5 class="card-title"><a href="#">Vission Exclusive</a></h5>
+              <h5 class="card-title"><a href="#">Visionnaire Exclusive</a></h5>
             </div>
           </div>
         </div>

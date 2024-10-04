@@ -26,14 +26,7 @@ class HomeController extends Controller
         return view($this->prefix.'gallery-details');
 
     }
-    public function events(Request $request){
-        return view($this->prefix.'events');
 
-    }
-    public function eventDetails(Request $request){
-        return view($this->prefix.'events-details');
-
-    }
     public function visionnaire(Request $request){
         return view($this->prefix.'visionnaire');
 
