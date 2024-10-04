@@ -26,10 +26,6 @@ class HomeController extends Controller
         return view($this->prefix.'gallery-details');
 
     }
-    public function brands(Request $request){
-        return view($this->prefix.'brands');
-
-    }
     public function events(Request $request){
         return view($this->prefix.'events');
 
@@ -44,8 +40,5 @@ class HomeController extends Controller
     }
     public function teams(Request $request){
         return view($this->prefix.'teams');
-    }
-    public function brandDetails(Request $request){
-        return view($this->prefix.'brand-details');
     }
 }
