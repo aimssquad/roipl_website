@@ -45,4 +45,7 @@ class HomeController extends Controller
     public function teams(Request $request){
         return view($this->prefix.'teams');
     }
+    public function brandDetails(Request $request){
+        return view($this->prefix.'brand-details');
+    }
 }

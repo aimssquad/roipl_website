@@ -2,7 +2,7 @@
 
 
 
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
@@ -111,7 +111,7 @@
 
 
 
-        </div><!-- End Portfolio Container -->
+        </div>
 
       </div>
 

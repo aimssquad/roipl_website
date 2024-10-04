@@ -17,6 +17,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/gallery', 'gallery')->name('gallery');
     Route::get('/gallery-details', 'galleryDetails')->name('gallery-details');
     Route::get('/event-details', 'eventDetails')->name('event-details');
+    Route::get('/brand-details', 'brandDetails')->name('brand-details');
 });
 
 Route::controller(ContactController::class)->group(function () {
