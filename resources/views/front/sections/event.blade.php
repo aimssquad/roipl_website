@@ -1,7 +1,4 @@
 <section id="events" class="events section">
-
-
-
     <div class="container" data-aos="fade-up">
         <div class="row">
             @foreach($datas as $event)
@@ -22,6 +19,4 @@
             @endforeach
         </div>
     </div>
-
-
 </section>

@@ -3,8 +3,6 @@
     <div class="container px-6">
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-            <!-- Filter Options -->
             <div class="row align-items-center">
                 <div class="col-lg-12 text-center text-lg-center">
                     <ul class="portfolio-filters isotope-filters white-text-color" data-aos="fade-up" data-aos-delay="100">

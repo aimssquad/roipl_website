@@ -16,8 +16,9 @@ class LorController extends Controller
         $datas = Event::all();
         return view($this->prefix.'events', compact('datas'));
     }
-    public function eventDetails(Request $request){
-        return view($this->prefix.'events-details');
+    public function eventDetails(Request $request,$id){
+        $event = Event::with('images')->findOrFail($id);
+        return view($this->prefix . 'events-details', compact('event'));
 
     }
 }
