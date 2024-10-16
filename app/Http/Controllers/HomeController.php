@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,7 +12,8 @@ class HomeController extends Controller
         $this->prefix = 'front.';
     }
     public function index(){
-        return view($this->prefix.'home');
+        $brands = Brand::all();
+        return view($this->prefix.'home', compact('brands'));
 
     }
     public function about(Request $request){

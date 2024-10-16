@@ -29,9 +29,9 @@
                                 <h4>{{ $brand->title }}</h4>
                                 <p>{{ $brand->small_description }}</p>
                                 <div>
-                                    <a href="{{ asset('storage/'.$brand->image1) }}" title="{{ $brand->title }}" data-gallery="portfolio-gallery-{{ strtolower($brand->brand_type) }}" class="glightbox preview-link">
+                                    {{-- <a href="{{ asset('storage/'.$brand->image1) }}" title="{{ $brand->title }}" data-gallery="portfolio-gallery-{{ strtolower($brand->brand_type) }}" class="glightbox preview-link">
                                         <i class="bi bi-zoom-in"></i>
-                                    </a>
+                                    </a> --}}
                                     <a href="{{ route('brand-details', $brand->id) }}" title="More Details" class="details-link">
                                         <i class="bi bi-link-45deg"></i>
                                     </a>

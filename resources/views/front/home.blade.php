@@ -5,7 +5,7 @@
     @include('front.sections.hero')
     @include('front.sections.about')
     @include('front.sections.clients')
-    @include('front.sections.portfolio')
+    @include('front.sections.brand')
     {{-- @include('front.sections.why-us') --}}
     @include('front.sections.call-to-action')
     @include('front.sections.services')
