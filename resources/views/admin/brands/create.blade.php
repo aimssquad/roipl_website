@@ -42,9 +42,9 @@
                             <div class="col-sm-10">
                                 <select class="form-control @error('brand_type') is-invalid @enderror" id="inputBrandType" name="brand_type" required>
                                     <option value="" disabled selected>Select Brand Type</option>
-                                    <option value="premium" {{ old('brand_type') == 'premium' ? 'selected' : '' }}>Premium</option>
-                                    <option value="luxury" {{ old('brand_type') == 'luxury' ? 'selected' : '' }}>Luxury</option>
-                                    <option value="house" {{ old('brand_type') == 'house' ? 'selected' : '' }}>House</option>
+                                    <option value="house" {{ old('brand_type') == 'house' ? 'selected' : '' }}>In House Brands</option>
+                                    <option value="luxury" {{ old('brand_type') == 'luxury' ? 'selected' : '' }}>International & Semi Luxury Brands</option>
+                                    <option value="premium" {{ old('brand_type') == 'premium' ? 'selected' : '' }}>Luxury Brands</option>
                                 </select>
                                 @error('brand_type')
                                     <div class="invalid-feedback">
