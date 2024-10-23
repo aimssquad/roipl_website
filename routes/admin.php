@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BrandLogoController;
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\EventImageController;
@@ -47,6 +48,7 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
     Route::post('/contacts/update-status', [ContactController::class, 'updateStatus'])->name('contacts.updateStatus');
     Route::post('/careers/update-status', [CareerController::class, 'updateStatus'])->name('careers.updateStatus');
     Route::post('/export-table-data', [ExportController::class, 'exportTableData'])->name('exportTableData');
+    Route::resource('brandlogos', BrandLogoController::class)->except(['show']);
 });
 });
 
