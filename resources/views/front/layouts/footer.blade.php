@@ -14,8 +14,8 @@
                     <p>Biowonder, Eastern Metropolitan Bypass Rd</p>
                     <p>East Kolkata Twp, Kolkata</p>
                     <p>West Bengal 700107</p>
-                    <p class="mt-3"><strong>Phone:</strong> <span>098302 43438</span></p>
-                    <p><strong>Email:</strong> <span>info@ronakoptical.com</span></p>
+                    {{-- <p class="mt-3"><strong>Phone:</strong> <span>098302 43438</span></p> --}}
+                    <p><strong>Email:</strong> <span>info@ronakoptik.com</span></p>
                 </div>
                 <div class="social-links d-flex mt-4">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
