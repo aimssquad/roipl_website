@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\BrandLogo;
 use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     protected $prefix;
@@ -13,7 +13,8 @@ class HomeController extends Controller
     }
     public function index(){
         $brands = Brand::all();
-        return view($this->prefix.'home', compact('brands'));
+        $logos = BrandLogo::all();
+        return view($this->prefix.'home', compact('brands','logos'));
 
     }
     public function about(Request $request){
