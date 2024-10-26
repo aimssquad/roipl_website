@@ -16,4 +16,9 @@ class Event extends Model
         return $this->hasMany(EventImage::class);
     }
 
+    public function folders()
+    {
+        return $this->hasMany(EventFolder::class);
+    }
+
 }

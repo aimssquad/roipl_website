@@ -137,6 +137,10 @@ class EventController extends Controller
         return redirect()->route($this->prefix.'index')->with('success', 'Event deleted successfully.');
     }
 
+    public function addEvent(Request $request ,$id){
+
+    }
+
 
 
 }

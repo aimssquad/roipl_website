@@ -69,6 +69,10 @@
                                     </td>
                                     <td>
                                         <!-- Edit Button -->
+                                        <a href="{{ route('admin.event-folders.index', $data->id) }}" class="btn btn-info btn-sm text-white">
+                                            <i class="bi bi-clipboard-plus"></i> Event Folder
+                                        </a>
+
                                         <a href="{{ route('admin.events.edit', $data->id) }}" class="btn btn-primary btn-sm">
                                             <i class="bi bi-pencil-square"></i> Edit
                                         </a>
