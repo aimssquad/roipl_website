@@ -25,10 +25,10 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const images = [
-            "{{ asset('assets/img/banner/Brand-Banner-2.webp') }}",
-            "{{ asset('assets/img/banner/Brand-Banner-3.webp') }}",
-            "{{ asset('assets/img/banner/Brand-Banner-4.webp') }}",
-            "{{ asset('assets/img/banner/Brand-Banner-1.webp') }}"
+            "{{ asset('assets/img/banner/BrandBanner2.webp') }}",
+            "{{ asset('assets/img/banner/BrandBanner3.webp') }}",
+            "{{ asset('assets/img/banner/BrandBanner4.webp') }}",
+            "{{ asset('assets/img/banner/BrandBanner1.webp') }}"
         ];
         let currentIndex = 0;
         const sliderElement = document.getElementById("backgroundSlider");
