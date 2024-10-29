@@ -6,14 +6,13 @@
                     <span class="sitename">ROIPL</span>
                 </a> --}}
                 <a href="{{ url('/') }}" class="logo d-flex align-items-center">
-                    <img src="{{ asset('assets/img/ronaklogo.png') }}" alt="">
+                    <img src="{{ asset('assets/img/ronaklogomod.png') }}" alt="">
                     {{-- <h1 class="sitename">ROIPL</h1> --}}
                 </a>
                 <div class="footer-contact">
-                    <p>789 Anandapur Main Road</p>
-                    <p>Biowonder, Eastern Metropolitan Bypass Rd</p>
-                    <p>East Kolkata Twp, Kolkata</p>
-                    <p>West Bengal 700107</p>
+                    <p>18th Floor, Biowonder</p>
+                    <p>789, Anandapur Main Road</p>
+                    <p>Kolkata, West Bengal: 700107</p>
                     {{-- <p class="mt-3"><strong>Phone:</strong> <span>098302 43438</span></p> --}}
                     <p><strong>Email:</strong> <span>info@ronakoptik.com</span></p>
                 </div>
@@ -26,11 +25,11 @@
             </div>
 
             <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Useful Links</h4>
+                <h4>Quick Links</h4>
                 <ul>
                     <li><a href="{{ route('gallery') }}" class="{{ Route::currentRouteName() == 'gallery' ? 'active' : '' }}" class="{{ Request::is('gallery') ? 'active' : '' }}">Gallery</a></li>
                     <li><a href="{{ route('careers.index') }}" class="{{ Request::is('careers') ? 'active' : '' }}">Careers</a></li>
-                    <li><a href="#" class="{{ Request::is('csr') ? 'active' : '' }}">CSR</a></li>
+                    {{-- <li><a href="#" class="{{ Request::is('csr') ? 'active' : '' }}">CSR</a></li> --}}
                     <li><a href="{{ route('contact') }}" class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact Us</a></li>
                     <li><a href="#" class="{{ Request::is('team') ? 'active' : '' }}">Team & Board</a></li>
                 </ul>

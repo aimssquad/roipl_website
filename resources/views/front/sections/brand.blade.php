@@ -1,5 +1,9 @@
 <section id="portfolio" class="portfolio section" style="background-color: #000 !important;">
 
+    <div class="container section-title" data-aos="fade-up">
+        <h1 style="color: white !important;">Our Brands</h1>
+    </div>
+
     <div class="container px-6">
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
@@ -21,22 +25,22 @@
                     <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-{{ strtolower($brand->brand_type) }}">
                         <div class="portfolio-content h-100">
                             @if($brand->image1)
-                                <img src="{{ asset('storage/'.$brand->image1) }}" class="img-fluid" alt="Brand Image">
+                            <a href="{{ route('brand-details', $brand->id) }}" title="More Details" class="details-link"> <img src="{{ asset('storage/'.$brand->image1) }}" class="img-fluid" alt="{{ $brand->title }}"></a>
                             @else
                                 <img src="{{ asset('assets/img/placeholder.jpg') }}" class="img-fluid" alt="No Image Available">
                             @endif
-                            <div class="portfolio-info">
-                                <h4>{{ $brand->title }}</h4>
-                                <p>{{ $brand->small_description }}</p>
-                                <div>
+                            {{-- <div class="portfolio-info"> --}}
+                                {{-- <h4>{{ $brand->title }}</h4>
+                                <p>{{ $brand->small_description }}</p> --}}
+                                {{-- <div> --}}
                                     {{-- <a href="{{ asset('storage/'.$brand->image1) }}" title="{{ $brand->title }}" data-gallery="portfolio-gallery-{{ strtolower($brand->brand_type) }}" class="glightbox preview-link">
                                         <i class="bi bi-zoom-in"></i>
                                     </a> --}}
-                                    <a href="{{ route('brand-details', $brand->id) }}" title="More Details" class="details-link">
+                                    {{-- <a href="{{ route('brand-details', $brand->id) }}" title="More Details" class="details-link">
                                         <i class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
-                            </div>
+                                    </a> --}}
+                                {{-- </div>
+                            </div> --}}
                         </div>
                     </div>
                 @endforeach

@@ -2,10 +2,10 @@
 <section id="contact" class="contact section">
 
     <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
+    {{-- <div class="container section-title" data-aos="fade-up">
       <span class="description-title">Contact Us</span>
       <h2>Contact Us</h2>
-    </div>
+    </div> --}}
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 

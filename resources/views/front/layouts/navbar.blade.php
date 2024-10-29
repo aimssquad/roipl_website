@@ -2,7 +2,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
         <a href="{{ url('/') }}" class="logo d-flex align-items-center">
-            <img src="{{ asset('assets/img/ronaklogo.png') }}" alt="">
+            <img src="{{ asset('assets/img/ronaklogomod.png') }}" alt="">
             {{-- <h1 class="sitename">ROIPL</h1> --}}
         </a>
 
