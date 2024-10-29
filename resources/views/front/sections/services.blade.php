@@ -16,7 +16,7 @@
 
         <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
           <div class="service-item d-flex">
-            <div class="icon flex-shrink-0"><i class="bi bi-cake"></i></div>
+            <div class="icon flex-shrink-0"><i class="bi bi-rocket-takeoff"></i></div>
             <div>
               <h4 class="title"><a href="#" class="stretched-link">Celebrations</a></h4>
               <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris </p>
