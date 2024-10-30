@@ -67,7 +67,7 @@
         });
     });
 </script>
-<script>
+{{-- <script>
     document.addEventListener('DOMContentLoaded', function() {
         ClassicEditor
             .create(document.querySelector('#inputEventDescription'))
@@ -80,7 +80,7 @@
                 });
             })
     });
-</script>
+</script> --}}
 
 
 @yield('script')

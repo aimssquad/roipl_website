@@ -43,11 +43,11 @@ class EventController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required',
-            'event_date' => 'required|date',
-            'event_time' => 'required',
-            'place' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Single image
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Multiple images
+            // 'event_date' => 'required|date',
+            // 'event_time' => 'required',
+            // 'place' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048', // Single image
+            // 'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Multiple images
         ]);
 
         // Create the event
@@ -60,12 +60,12 @@ class EventController extends Controller
         }
 
         // Handle multiple images upload
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $imagePath = $image->store('event_images', 'public');
-                $event->images()->create(['image' => $imagePath]);
-            }
-        }
+        // if ($request->hasFile('images')) {
+        //     foreach ($request->file('images') as $image) {
+        //         $imagePath = $image->store('event_images', 'public');
+        //         $event->images()->create(['image' => $imagePath]);
+        //     }
+        // }
 
         return redirect()->route($this->prefix.'index')->with('success', 'Event created successfully.');
     }
@@ -99,11 +99,11 @@ class EventController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required',
-            'event_date' => 'required|date',
-            'event_time' => 'required',
-            'place' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Single image
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Multiple images
+            // 'event_date' => 'required|date',
+            // 'event_time' => 'required',
+            // 'place' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048', // Single image
+            // 'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048', // Multiple images
         ]);
 
         // Update the event
@@ -116,12 +116,12 @@ class EventController extends Controller
         }
 
         // Handle multiple images upload
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $imagePath = $image->store('event_images', 'public');
-                $event->images()->create(['image' => $imagePath]);
-            }
-        }
+        // if ($request->hasFile('images')) {
+        //     foreach ($request->file('images') as $image) {
+        //         $imagePath = $image->store('event_images', 'public');
+        //         $event->images()->create(['image' => $imagePath]);
+        //     }
+        // }
 
         return redirect()->route($this->prefix.'index')->with('success', 'Event updated successfully.');
     }

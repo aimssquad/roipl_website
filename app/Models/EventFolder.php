@@ -11,6 +11,11 @@ class EventFolder extends Model
 
     protected $fillable = ['event_id', 'image_path', 'description'];
 
+
+    public function images()
+    {
+        return $this->hasMany(EventFolderImage::class);
+    }
     public function event()
     {
         return $this->belongsTo(Event::class);

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\BrandLogoController;
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\EventFolderController;
+use App\Http\Controllers\Admin\EventFolderImageController;
 use App\Http\Controllers\Admin\EventImageController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\UserController;
@@ -15,6 +16,8 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\EventController;
+
+
 
 Route::middleware(['admin_guest'])->prefix('/admin/')->name('admin.')->group(function () {
     Route::controller(LoginController::class)->group(function () {
@@ -60,10 +63,7 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
         Route::get('events/{event}/folders/{folder}/edit', [EventFolderController::class, 'edit'])->name('event-folders.edit');
         Route::put('events/{event}/folders/{folder}', [EventFolderController::class, 'update'])->name('event-folders.update');
         Route::delete('events/{event}/folders/{folder}', [EventFolderController::class, 'destroy'])->name('event-folders.destroy');
-
-
-
-
+        Route::delete('events/{event}/folders/{folder}/images/{image}', [EventFolderImageController::class, 'destroy'])->name('event-folder-images.destroy');
     });
 });
 

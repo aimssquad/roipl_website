@@ -40,43 +40,13 @@
                         </div>
 
                         <!-- Event Date Input -->
-                        <div class="row mb-3">
-                            <label for="inputEventDate" class="col-sm-2 col-form-label">Event Date</label>
-                            <div class="col-sm-10">
-                                <input type="date" class="form-control @error('event_date') is-invalid @enderror" id="inputEventDate" name="event_date" value="{{ old('event_date') }}" required>
-                                @error('event_date')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                        </div>
+
 
                         <!-- Event Time Input -->
-                        <div class="row mb-3">
-                            <label for="inputEventTime" class="col-sm-2 col-form-label">Event Time</label>
-                            <div class="col-sm-10">
-                                <input type="time" class="form-control @error('event_time') is-invalid @enderror" id="inputEventTime" name="event_time" value="{{ old('event_time') }}" required>
-                                @error('event_time')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                        </div>
+
 
                         <!-- Event Place Input -->
-                        <div class="row mb-3">
-                            <label for="inputEventPlace" class="col-sm-2 col-form-label">Event Place</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control @error('place') is-invalid @enderror" id="inputEventPlace" name="place" placeholder="Enter event place" value="{{ old('place') }}" required>
-                                @error('place')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                        </div>
+
 
                         <div class="row mb-3">
                             <label for="inputEventImage" class="col-sm-2 col-form-label">Event Image</label>
@@ -145,12 +115,11 @@
 @section('script')
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() {
         const mainImageInput = document.getElementById('inputEventImage');
         const mainImagePreviewContainer = document.getElementById('mainImagePreviewContainer');
         const mainImagePreview = document.getElementById('mainImagePreview');
         const removeMainImageIcon = document.getElementById('removeMainImageIcon');
-
         const additionalImagesInput = document.getElementById('inputAdditionalEventImages');
         const additionalImagesPreviewContainer = document.getElementById('additionalImagesPreviewContainer');
 

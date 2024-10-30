@@ -45,9 +45,6 @@
                             <tr>
                                 <th>Sl No</th>
                                 <th>Title</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Place</th>
                                 <th>Image</th>
                                 <th>Actions</th>
                             </tr>
@@ -57,9 +54,6 @@
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $data->title }}</td>
-                                    <td>{{ $data->event_date }}</td>
-                                    <td>{{ $data->event_time }}</td>
-                                    <td>{{ $data->place }}</td>
                                     <td>
                                         @if($data->image)
                                             <img src="{{ asset('storage/'.$data->image) }}" alt="Event Image" style="max-width: 50px;">
