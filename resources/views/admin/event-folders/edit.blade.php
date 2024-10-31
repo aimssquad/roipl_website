@@ -92,7 +92,7 @@
             var button = $(this); // Reference to the button clicked
 
             // Construct the URL
-            var url = `/admin/events/${eventId}/folders/${folderId}/images/${imageId}`;
+            var url = `{{ url('/admin/events') }}/${eventId}/folders/${folderId}/images/${imageId}`;
             console.log('AJAX URL:', url);  // Print URL to console for debugging
 
             $.ajax({
