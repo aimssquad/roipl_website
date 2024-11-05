@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\BrandLogo;
+use App\Models\EventFolder;
+use App\Models\EventFolderImage;
+use App\Models\Event;
 use Illuminate\Http\Request;
+
 class HomeController extends Controller
 {
     protected $prefix;
@@ -14,19 +18,30 @@ class HomeController extends Controller
     public function index(){
         $brands = Brand::all();
         $logos = BrandLogo::all();
-        return view($this->prefix.'home', compact('brands','logos'));
+        $images = EventFolderImage::orderBy('created_at', 'desc')
+                          ->take(10)
+                          ->get();
+        return view($this->prefix.'home', compact('brands','logos','images'));
 
     }
     public function about(Request $request){
-        return view($this->prefix.'about');
+        $logos = BrandLogo::all();
+        return view($this->prefix.'about',compact('logos'));
 
     }
-    public function gallery(Request $request){
-        return view($this->prefix.'gallery');
+    public function gallery(){
+        $folders = EventFolder::all();
+        return view($this->prefix.'gallery',compact('folders'));
 
     }
-    public function galleryDetails(Request $request){
-        return view($this->prefix.'gallery-details');
+    public function galleryDetails($folder){
+        $event_id_sql = EventFolder::where('id',$folder)->first();
+        $event_id = $event_id_sql->event_id;
+        $event = Event::where('id',$event_id)->first();
+
+
+        $images = EventFolderImage::where('event_folder_id' ,$folder)->get();
+        return view($this->prefix.'gallery-details',compact('images','event'));
 
     }
 

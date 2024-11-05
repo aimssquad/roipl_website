@@ -15,7 +15,8 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/our story', 'about')->name('about');
     Route::get('/teams', 'teams')->name('teams');
     Route::get('/gallery', 'gallery')->name('gallery');
-    Route::get('/gallery-details', 'galleryDetails')->name('gallery-details');
+    Route::get('/gallery-details/{event}/folders', 'galleryDetails')->name('gallery-details');
+
 });
 Route::controller(BrandController::class)->group(function () {
     Route::get('/brands', 'brands')->name('brands');
@@ -24,7 +25,8 @@ Route::controller(BrandController::class)->group(function () {
 
 Route::controller(LorController::class)->group(function () {
     Route::get('/life of ROIPL', 'events')->name('events');
-    Route::get('/event-details/{id}', 'eventDetails')->name('event-details');
+    Route::get('/events/{event}/folders', 'eventDetails')->name('event-details');
+    Route::get('/events/{event}/folders/{folder}/details', 'detailsImage')->name('event-image.details');
 });
 
 Route::controller(ContactController::class)->group(function () {

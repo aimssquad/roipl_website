@@ -39,84 +39,16 @@
             <i class="bi bi-arrow-right-short"></i>
           </button>
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="service-item">
-                <div class="service-item-contents">
-                  {{-- <a href="#">
-                    <span class="service-item-category">We do</span>
-                    <h2 class="service-item-title">Planting</h2>
-                  </a> --}}
+            @foreach ($images as $image)
+                <div class="swiper-slide">
+                <div class="service-item">
+                    <div class="service-item-contents">
+                    </div>
+                    <img src="{{ asset('storage/' . $image->image_path) }}" alt="Image" class="img-fluid">
                 </div>
-                <img src="assets/img/service/img_sq_1.jpg" alt="Image" class="img-fluid">
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="service-item">
-                <div class="service-item-contents">
-                  {{-- <a href="#">
-                    <span class="service-item-category">We do</span>
-                    <h2 class="service-item-title">Mulching</h2>
-                  </a> --}}
                 </div>
-                <img src="assets/img/service/img_sq_3.jpg" alt="Image" class="img-fluid">
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="service-item">
-                <div class="service-item-contents">
-                  {{-- <a href="#">
-                    <span class="service-item-category">We do</span>
-                    <h2 class="service-item-title">Watering</h2>
-                  </a> --}}
-                </div>
-                <img src="assets/img/service/img_sq_8.jpg" alt="Image" class="img-fluid">
-              </div>
-            </div>
+            @endforeach
 
-            <div class="swiper-slide">
-              <div class="service-item">
-                <div class="service-item-contents">
-                  {{-- <a href="#">
-                    <span class="service-item-category">We do</span>
-                    <h2 class="service-item-title">Fertilizing</h2>
-                  </a> --}}
-                </div>
-                <img src="assets/img/service/img_sq_4.jpg" alt="Image" class="img-fluid">
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="service-item">
-                <div class="service-item-contents">
-                  {{-- <a href="#">
-                    <span class="service-item-category">We do</span>
-                    <h2 class="service-item-title">Harvesting</h2>
-                  </a> --}}
-                </div>
-                <img src="assets/img/service/img_sq_5.jpg" alt="Image" class="img-fluid">
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="service-item">
-                <div class="service-item-contents">
-                  {{-- <a href="#">
-                    <span class="service-item-category">We do</span>
-                    <h2 class="service-item-title">Mowing</h2>
-                  </a> --}}
-                </div>
-                <img src="assets/img/service/img_sq_6.jpg" alt="Image" class="img-fluid">
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="service-item">
-                <div class="service-item-contents">
-                  {{-- <a href="#">
-                    <span class="service-item-category">We do</span>
-                    <h2 class="service-item-title">Seeding Plants</h2>
-                  </a> --}}
-                </div>
-                <img src="assets/img/service/img_sq_8.jpg" alt="Image" class="img-fluid">
-              </div>
-            </div>
           </div>
           {{-- <div class="swiper-pagination"></div> --}}
         </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\EventFolder;
 use Illuminate\Http\Request;
 use App\Models\Event;
 
@@ -16,9 +17,14 @@ class LorController extends Controller
         $datas = Event::all();
         return view($this->prefix.'events', compact('datas'));
     }
-    public function eventDetails(Request $request,$id){
-        $event = Event::with('images')->findOrFail($id);
-        return view($this->prefix . 'events-details', compact('event'));
+    public function eventDetails(Event $event){
+        $folders = $event->folders;
+        return view($this->prefix . 'events-details', compact('event','folders'));
+
+    }
+    public function detailsImage(Event $event, EventFolder $folder){
+        $images = $folder->images;
+        return view($this->prefix . 'events-details-image', compact('event','folder','images'));
 
     }
 }

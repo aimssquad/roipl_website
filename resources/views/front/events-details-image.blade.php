@@ -2,5 +2,7 @@
 
 @section('content')
     @include('front.partials.page-title', ['title' => $event->title, 'current' => $event->title])
-    @include('front.sections.event-detail')
+    @include('front.sections.event-image-details')
+
+
 @endsection

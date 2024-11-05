@@ -1,4 +1,4 @@
-<!-- Gallery Section -->
+ <!-- Gallery Section -->
  <section id="gallery" class="gallery section">
 
     <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
