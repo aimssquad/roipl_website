@@ -5,14 +5,14 @@
                 {
                     "loop": true,
                     "speed": 600,
-                    "autoplay": { "delay": 55000 },
+                    "autoplay": { "delay": 5500 },
                     "slidesPerView": "auto",
                     "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true },
                     "breakpoints": {
-                        "320": { "slidesPerView": 2, "spaceBetween": 40 },
-                        "480": { "slidesPerView": 3, "spaceBetween": 60 },
-                        "640": { "slidesPerView": 4, "spaceBetween": 80 },
-                        "992": { "slidesPerView": 6, "spaceBetween": 120 }
+                        "320": { "slidesPerView": 2, "spaceBetween": 40, "slidesPerGroup": 2 },
+                        "480": { "slidesPerView": 3, "spaceBetween": 60, "slidesPerGroup": 3 },
+                        "640": { "slidesPerView": 4, "spaceBetween": 80, "slidesPerGroup": 4 },
+                        "992": { "slidesPerView": 6, "spaceBetween": 120, "slidesPerGroup": 4 }
                     }
                 }
             </script>
