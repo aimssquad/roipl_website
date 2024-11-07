@@ -7,7 +7,7 @@
         <div class="col-xl-10">
           <div class="text-center">
             <h3>Life at ROIPL</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Here at ROIPL, we don’t just say that we are a family; we mean it! That’s why every success, large or small, becomes a cause for celebration. From sports events to social gatherings, we make sure that life at ROIPL is never just all work and no play!</p>
 
           </div>
         </div>

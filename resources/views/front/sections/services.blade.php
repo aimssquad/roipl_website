@@ -3,49 +3,21 @@
 
       <div class="row gy-4">
 
-        <div class="col-xl-3 col-lg-6 " data-aos="fade-up" data-aos-delay="100">
-          <div class="service-item d-flex">
-            <div class="icon flex-shrink-0"><i class="bi bi-people"></i></div>
-            <div>
-              <h4 class="title"><a href="#" class="stretched-link">EEA</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et </p>
+        @foreach ($events as $event)
+
+            <div class="col-xl-3 col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="{{ $event->icon }}"></i></div>
+                <div>
+                    <h4 class="title"><a href="{{ route('event-details', $event->id) }}" class="stretched-link">{{ $event->title }}</a></h4>
+                    <p class="description">{{ $event->short_description }} </p>
+                </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <!-- End Service Item -->
 
-        <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-item d-flex">
-            <div class="icon flex-shrink-0"><i class="bi bi-rocket-takeoff"></i></div>
-            <div>
-              <h4 class="title"><a href="#" class="stretched-link">Celebrations</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris </p>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
+        @endforeach
 
 
-        <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="600">
-          <div class="service-item d-flex">
-            <div class="icon flex-shrink-0"><i class="bi bi-trophy"></i></div>
-            <div>
-              <h4 class="title"><a href="#" class="stretched-link">Annual Championship</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio </p>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-              <div>
-                <h4 class="title"><a href="#" class="stretched-link">Events</a></h4>
-                <p class="description">Et harum quidem rerum facilis est et expedita distinctio </p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-      </div>
 
     </div>
 

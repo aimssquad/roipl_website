@@ -18,10 +18,9 @@ class HomeController extends Controller
     public function index(){
         $brands = Brand::all();
         $logos = BrandLogo::all();
-        $images = EventFolderImage::orderBy('created_at', 'desc')
-                          ->take(10)
-                          ->get();
-        return view($this->prefix.'home', compact('brands','logos','images'));
+        $images = EventFolderImage::orderBy('created_at', 'desc')->take(10)->get();
+        $events = Event::all();
+        return view($this->prefix.'home', compact('brands','logos','images','events'));
 
     }
     public function about(Request $request){
