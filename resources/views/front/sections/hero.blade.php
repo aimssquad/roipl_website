@@ -4,7 +4,7 @@
     <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <h2>Ronak Optik: We Are For Sight</h2>
+                <h2>We Are For Sight</h2>
                 <p>Bringing you the best of world-class eyewear that catches your eye.</p>
                 {{-- <a href="#about" class="btn-get-started">Get Started</a> --}}
             </div>
