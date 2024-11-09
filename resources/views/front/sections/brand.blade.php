@@ -1,4 +1,4 @@
-<section id="portfolio" class="portfolio section" style="background: url('{{ asset('assets/img/Lobby3.jpg') }}') no-repeat center center/cover;">
+<section id="portfolio" class="portfolio section" style="background: url('{{ asset('assets/img/brand2.jpg') }}') no-repeat center center/cover;">
     <div class="container section-title" data-aos="fade-up">
         <h1 style="color: white !important;">Our Brands</h1>
     </div>
