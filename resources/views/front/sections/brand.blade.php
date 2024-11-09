@@ -1,11 +1,8 @@
-<section id="portfolio" class="portfolio section" style="background-color: #000 !important;">
-
+<section id="portfolio" class="portfolio section" style="background: url('{{ asset('assets/img/Lobby3.jpg') }}') no-repeat center center/cover;">
     <div class="container section-title" data-aos="fade-up">
         <h1 style="color: white !important;">Our Brands</h1>
     </div>
-
     <div class="container px-6">
-
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
             <div class="row align-items-center">
                 <div class="col-lg-12 text-center text-lg-center">
@@ -25,28 +22,16 @@
                     <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-{{ strtolower($brand->brand_type) }}">
                         <div class="portfolio-content h-100">
                             @if($brand->image1)
-                            <a href="{{ route('brand-details', $brand->id) }}" title="More Details" class="details-link"> <img src="{{ asset('storage/'.$brand->image1) }}" class="img-fluid" alt="{{ $brand->title }}"></a>
+                                <a href="{{ route('brand-details', $brand->id) }}" title="More Details" class="details-link">
+                                    <img src="{{ asset('storage/'.$brand->image1) }}" class="img-fluid" alt="{{ $brand->title }}">
+                                </a>
                             @else
                                 <img src="{{ asset('assets/img/placeholder.jpg') }}" class="img-fluid" alt="No Image Available">
                             @endif
-                            {{-- <div class="portfolio-info"> --}}
-                                {{-- <h4>{{ $brand->title }}</h4>
-                                <p>{{ $brand->small_description }}</p> --}}
-                                {{-- <div> --}}
-                                    {{-- <a href="{{ asset('storage/'.$brand->image1) }}" title="{{ $brand->title }}" data-gallery="portfolio-gallery-{{ strtolower($brand->brand_type) }}" class="glightbox preview-link">
-                                        <i class="bi bi-zoom-in"></i>
-                                    </a> --}}
-                                    {{-- <a href="{{ route('brand-details', $brand->id) }}" title="More Details" class="details-link">
-                                        <i class="bi bi-link-45deg"></i>
-                                    </a> --}}
-                                {{-- </div>
-                            </div> --}}
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
-
     </div>
-
 </section>

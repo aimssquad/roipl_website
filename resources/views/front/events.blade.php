@@ -1,16 +1,16 @@
 @extends('front.layouts.app')
 
 @section('content')
-{{-- <div class="page-title dark-background" style="background-image: url('{{asset('assets/img/event-banner.jpg')}}'); background-size: cover; background-position: center;">
-    <div class="container">
-        <h1 style="color: white !important;">Life at ROIPL</h1>
-    </div>
-</div> --}}
-
-<div class="page-title page-title dark-background" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), background-size: cover; background-position: center; background-repeat: no-repeat; height: 50vh;">
+<div class="page-title dark-background" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{asset('assets/img/Life-at-ROIPL.jpg')}}'); background-size: cover; background-position: center;height: 60vh;">
     <div class="container">
         <h1 style="color: white !important;">Life at ROIPL</h1>
     </div>
 </div>
+
+{{-- <div class="page-title page-title dark-background" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), background-size: cover; background-position: center; background-repeat: no-repeat; height: 50vh;">
+    <div class="container">
+        <h1 style="color: white !important;">Life at ROIPL</h1>
+    </div>
+</div> --}}
     @include('front.sections.event')
 @endsection
