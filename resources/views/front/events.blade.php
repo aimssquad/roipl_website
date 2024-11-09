@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 
 @section('content')
-<div class="page-title dark-background" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{asset('assets/img/Life-at-ROIPL.jpg')}}'); background-size: cover; background-position: center;height: 60vh;">
+<div class="page-title dark-background" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{asset('assets/img/Life-at-ROIPL.jpg')}}'); background-size: cover; background-position: center;height: 70vh;">
     <div class="container">
         <h1 style="color: white !important;">Life at ROIPL</h1>
     </div>
