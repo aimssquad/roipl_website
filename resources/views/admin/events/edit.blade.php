@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="pagetitle">
-    <h1>Edit Event</h1>
+    <h1>Edit Life at ROIPL</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-            <li class="breadcrumb-item">Event</li>
-            <li class="breadcrumb-item active">Edit Event</li>
+            <li class="breadcrumb-item">Life at ROIPL</li>
+            <li class="breadcrumb-item active">Edit Life at ROIPL</li>
         </ol>
     </nav>
 </div>
@@ -17,14 +17,14 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Edit Event</h5>
+                    <h5 class="card-title">Edit Life at ROIPL</h5>
 
                     <form action="{{ route('admin.events.update', $event->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <!-- Event Title Input -->
                         <div class="row mb-3">
-                            <label for="inputEventTitle" class="col-sm-2 col-form-label">Event Title</label>
+                            <label for="inputEventTitle" class="col-sm-2 col-form-label"> Title</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="inputEventTitle" name="title" value="{{ old('title', $event->title) }}" required>
                                 @error('title')
@@ -109,7 +109,7 @@
 
                         <!-- Submit Button -->
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Update Event</button>
+                            <button type="submit" class="btn btn-primary">Update </button>
                         </div>
                     </form>
 
