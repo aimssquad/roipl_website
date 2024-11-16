@@ -13,12 +13,13 @@
                 <li><a href="{{ route('brands') }}" class="{{ Route::currentRouteName() == 'brands' ? 'active' : '' }}">Brands</a></li>
                 <li><a href="{{ route('events') }}" class="{{ Route::currentRouteName() == 'events' ? 'active' : '' }}">Life at ROIPL</a></li>
                 <li><a href="{{ route('teams') }}" class="{{ Route::currentRouteName() == 'teams' ? 'active' : '' }}">Teams</a></li>
-                <li class="dropdown"><a href="{{ route('visionnaire') }}" class="{{ Route::currentRouteName() == 'visionnaire' ? 'active' : '' }}"><span>Visionnaire</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
+                {{-- <li class="dropdown"><a href="{{ route('visionnaire') }}" class="{{ Route::currentRouteName() == 'visionnaire' ? 'active' : '' }}"><span>Visionnaire</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> --}}
+                    {{-- <ul>
                         <li><a href="{{ route('visionnaire') }}#events">Road Show</a></li>
                         <li><a href="{{ route('visionnaire') }}#events">Visionnaire Exclusive</a></li>
-                    </ul>
-                <li>
+                    </ul> --}}
+                {{-- <li> --}}
+                <li><a href="{{ route('visionnaire') }}" class="{{ Route::currentRouteName() == 'visionnaire' ? 'active' : '' }}">Visionnaire</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

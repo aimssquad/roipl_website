@@ -30,33 +30,109 @@
     </div>
 </section>
 
-<section id="events" class="events section" style="margin-top: -60px !important;">
+<section id="services-2" class="services-2 section" style="margin-top: -110px !important;">
 
-    <div class="container" data-aos="fade-up">
+    <div class="services-carousel-wrap">
+      <div class="container">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "navigation": {
+                "nextEl": ".js-custom-next",
+                "prevEl": ".js-custom-prev"
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <button class="navigation-prev js-custom-prev">
+            <i class="bi bi-arrow-left-short"></i>
+          </button>
+          <button class="navigation-next js-custom-next">
+            <i class="bi bi-arrow-right-short"></i>
+          </button>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="service-item">
+                  <div class="service-item-contents">
+                    <a href="#">
+                      <span class="service-item-category">Noida</span>
+                      <h2 class="service-item-title">2020</h2>
+                    </a>
+                  </div>
+                  <img src="assets/img/vission/4L0A2791.jpg" alt="Image" class="img-fluid">
+                </div>
+              </div>
+            <div class="swiper-slide">
+                <div class="service-item">
+                  <div class="service-item-contents">
+                    <a href="#">
+                      <span class="service-item-category">Jaipur</span>
+                      <h2 class="service-item-title">2021</h2>
+                    </a>
+                  </div>
+                  <img src="assets/img/vission/4L0A2796.jpg" alt="Image" class="img-fluid">
+                </div>
+              </div>
+            <div class="swiper-slide">
+              <div class="service-item">
+                <div class="service-item-contents">
+                  <a href="#">
+                    <span class="service-item-category">Mumbai</span>
+                    <h2 class="service-item-title">2022</h2>
+                  </a>
+                </div>
+                <img src="assets/img/vission/ABHI9200.jpg" alt="Image" class="img-fluid">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-item">
+                <div class="service-item-contents">
+                  <a href="#">
+                    <span class="service-item-category">KOlkata</span>
+                    <h2 class="service-item-title">2023</h2>
+                  </a>
+                </div>
+                <img src="assets/img/vission/4L0A2951.jpg" alt="Image" class="img-fluid">
+              </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="service-item">
+                  <div class="service-item-contents">
+                    <a href="#">
+                      <span class="service-item-category">Dellhi</span>
+                      <h2 class="service-item-title">2024</h2>
+                    </a>
+                  </div>
+                  <img src="assets/img/vission/ABHI9306.jpg" alt="Image" class="img-fluid">
+                </div>
+              </div>
 
-      <div class="row">
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="card">
-            <div class="card-img">
-              <img src="{{asset('assets/img/vission/ronak-optic-optic-india-vashi-2020-1.jpg')}}" alt="...">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="#">Road Show</a></h5>
-            </div>
+
+
+
           </div>
-        </div>
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="card">
-            <div class="card-img">
-                <img src="{{asset('assets/img/vission/ronak-optic-optic-india-vashi-2020-4.jpg')}}" alt="...">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="#">Visionnaire Exclusive</a></h5>
-            </div>
-          </div>
+          {{-- <div class="swiper-pagination"></div> --}}
         </div>
       </div>
-
     </div>
-
-</section>
+  </section><!-- /Services 2 Section -->

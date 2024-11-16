@@ -8,7 +8,7 @@
               "loop": true,
               "speed": 600,
               "autoplay": {
-                "delay": 5000
+                "delay": 3000
               },
               "slidesPerView": "auto",
               "pagination": {
@@ -42,10 +42,7 @@
             <div class="swiper-slide">
               <div class="service-item">
                 <div class="service-item-contents">
-                  {{-- <a href="#">
-                    <span class="service-item-category">We do</span>
-                    <h2 class="service-item-title">Planting</h2>
-                  </a> --}}
+
                 </div>
                 <img src="assets/img/service/3350-web-banner-31-05_1024x1024.webp" alt="Image" class="img-fluid">
               </div>
