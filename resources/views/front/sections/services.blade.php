@@ -5,7 +5,7 @@
 
         @foreach ($events as $event)
 
-            <div class="col-xl-3 col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+            <div class="col-xl-6 col-lg-6 " data-aos="fade-up" data-aos-delay="100">
                 <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="{{ $event->icon }}"></i></div>
                 <div>
