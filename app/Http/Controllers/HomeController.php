@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index(){
         $brands = Brand::all();
         $logos = BrandLogo::all();
-        $images = EventFolderImage::where('event_folder_id', '=', '6')->get();
+        $images = EventFolderImage::where('event_folder_id', '=', '21')->get();
 
 
 
