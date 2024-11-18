@@ -1,4 +1,4 @@
-<section id="clients" class="clients section light-background">
+<section id="clients" class="clients section light-background" style="margin-top: -20px;">
     <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper init-swiper">
             <script type="application/json" class="swiper-config">
