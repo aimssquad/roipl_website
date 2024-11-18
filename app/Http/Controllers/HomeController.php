@@ -19,7 +19,8 @@ class HomeController extends Controller
         $brands = Brand::all();
         $logos = BrandLogo::all();
         $images = EventFolderImage::orderBy('created_at', 'desc')->take(10)->get();
-        $events = Event::all();
+        // $events = Event::all();
+        $events = Event::orderBy('id', 'asc')->limit(4)->get();
         return view($this->prefix.'home', compact('brands','logos','images','events'));
 
     }
@@ -29,7 +30,7 @@ class HomeController extends Controller
 
     }
     public function gallery(){
-        $folders = EventFolder::all();
+        $folders = EventFolder::where('description', '!=', 'Gallery')->get();
         return view($this->prefix.'gallery',compact('folders'));
 
     }

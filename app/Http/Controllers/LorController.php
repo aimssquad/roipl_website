@@ -14,7 +14,7 @@ class LorController extends Controller
         $this->prefix = 'front.';
     }
     public function events(Request $request){
-        $datas = Event::all();
+        $datas = Event::orderBy('id', 'asc')->limit(4)->get();
         return view($this->prefix.'events', compact('datas'));
     }
     public function eventDetails(Event $event){
