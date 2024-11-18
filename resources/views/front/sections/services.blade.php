@@ -10,7 +10,7 @@
                 <div class="icon flex-shrink-0"><i class="{{ $event->icon }}"></i></div>
                 <div>
                     <h4 class="title"><a href="{{ route('event-details', $event->id) }}" class="stretched-link">{{ $event->title }}</a></h4>
-                    <p class="description">{{ $event->short_description }} </p>
+                    <p class="description">{!! $event->short_description !!} </p>
                 </div>
                 </div>
             </div>
