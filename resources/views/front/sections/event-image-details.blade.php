@@ -9,7 +9,7 @@
             <div class="gallery-item h-100">
                 <img src="{{ asset('storage/' . $image->image_path) }}" class="img-fluid" alt="{{ asset($image->image_path) }}">
                 <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="{{ asset('storage/' . $image->image_path) }}" title="{{ asset($image->image_path) }}" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="{{ asset('storage/' . $image->image_path) }}"  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
 
                 </div>
             </div>

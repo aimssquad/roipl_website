@@ -24,6 +24,7 @@ class LorController extends Controller
     }
     public function detailsImage(Event $event, EventFolder $folder){
         $images = $folder->images;
+        // dd($folder);
         return view($this->prefix . 'events-details-image', compact('event','folder','images'));
 
     }

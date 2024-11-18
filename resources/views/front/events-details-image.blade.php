@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 
 @section('content')
-    @include('front.partials.page-title', ['title' => $event->title, 'current' => $event->title])
+    @include('front.partials.page-title', ['title' => $folder->description, 'current' => $folder->description])
     @include('front.sections.event-image-details')
 
 
