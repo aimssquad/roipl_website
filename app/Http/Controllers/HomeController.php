@@ -44,7 +44,7 @@ class HomeController extends Controller
 
 
         $images = EventFolderImage::where('event_folder_id' ,$folder)->get();
-        return view($this->prefix.'gallery-details',compact('images','event'));
+        return view($this->prefix.'gallery-details',compact('images','event','event_id_sql'));
 
     }
 
