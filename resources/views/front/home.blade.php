@@ -10,7 +10,7 @@
     @include('front.sections.call-to-action')
     @include('front.sections.services')
 
-    @include('front.sections.testimonials')
+    {{-- @include('front.sections.testimonials') --}}
     @include('front.sections.home-gallery')
     {{-- @include('front.sections.team') --}}
     {{-- @include('front.sections.pricing')
