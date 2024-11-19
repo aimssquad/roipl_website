@@ -1,11 +1,11 @@
 <footer id="footer" class="footer dark-background">
     <div class="container footer-top">
         <div class="row gy-4">
-            <div class="col-lg-4 col-md-6 footer-about">
+            <div class="col-lg-4 col-md-6 footer-about" style="margin-top: 10px;">
                 {{-- <a href="#" class="logo d-flex align-items-center">
                     <span class="sitename">ROIPL</span>
                 </a> --}}
-                <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+                <a href="{{ url('/') }}" class="logo d-flex align-items-center" style="margin-left: -12px;">
                     <img src="{{ asset('assets/img/ronaklogomod.png') }}" alt="">
                     {{-- <h1 class="sitename">ROIPL</h1> --}}
                 </a>
@@ -17,7 +17,7 @@
                     <p><strong>Email:</strong> <span>info@ronakoptik.com</span></p>
                 </div>
                 <div class="social-links d-flex mt-4">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    {{-- <a href=""><i class="bi bi-twitter-x"></i></a> --}}
                     <a href=""><i class="bi bi-facebook"></i></a>
                     <a href=""><i class="bi bi-instagram"></i></a>
                     <a href=""><i class="bi bi-linkedin"></i></a>
@@ -63,10 +63,12 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Ronak Optik India Pvt. Ltd.</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
+
+        <p> &copy; <?php echo date('Y'); ?> Ronak Optik India Pvt. Ltd. All Rights Reserved<br>
+            Designed by Ronak Optik India Pvt. Ltd.</p>
+        {{-- <div class="credits">
             Designed by <a href="#">Ronak Optik India Pvt. Ltd.</a>
-        </div>
+        </div> --}}
     </div>
 </footer>
 
