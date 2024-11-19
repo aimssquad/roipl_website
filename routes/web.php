@@ -4,6 +4,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\LorController;
+use App\Http\Controllers\VisionnaireController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BrandController;
@@ -11,7 +12,6 @@ use App\Http\Controllers\BrandController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('index');
-    Route::get('/visionnaire', 'visionnaire')->name('visionnaire');
     Route::get('/our story', 'about')->name('about');
     Route::get('/teams', 'teams')->name('teams');
     Route::get('/gallery', 'gallery')->name('gallery');
@@ -21,6 +21,12 @@ Route::controller(HomeController::class)->group(function () {
 Route::controller(BrandController::class)->group(function () {
     Route::get('/brands', 'brands')->name('brands');
     Route::get('/brand-details/{id}', 'brandDetails')->name('brand-details');
+});
+
+
+
+Route::controller(controller: VisionnaireController::class)->group(function () {
+    Route::get('/visionnaire', 'visionnaire')->name('visionnaire');
 });
 
 Route::controller(LorController::class)->group(function () {

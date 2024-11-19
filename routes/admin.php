@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\EventFolderImageController;
 use App\Http\Controllers\Admin\EventImageController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\VisionnaireController;
 use App\Http\Controllers\ExportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
@@ -64,6 +65,11 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
         Route::put('events/{event}/folders/{folder}', [EventFolderController::class, 'update'])->name('event-folders.update');
         Route::delete('events/{event}/folders/{folder}', [EventFolderController::class, 'destroy'])->name('event-folders.destroy');
         Route::delete('events/{event}/folders/{folder}/images/{image}', [EventFolderImageController::class, 'destroy'])->name('event-folder-images.destroy');
+
+
+        //visionnaires
+        Route::resource('visionnaires', VisionnaireController::class)->except(['show']);
+
     });
 });
 
