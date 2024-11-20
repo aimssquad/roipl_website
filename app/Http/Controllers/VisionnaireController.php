@@ -13,7 +13,6 @@ class VisionnaireController extends Controller
     }
 
     public function visionnaire(Request $request){
-        dd("abbas");
         $datas = Visionnaire::orderBy('id', 'asc')->get();
         return view($this->prefix.'visionnaire', compact('datas'));
     }

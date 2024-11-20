@@ -1,31 +1,26 @@
 <section id="featured-members" class="featured-members section">
     <div class="container">
-      <div class="row gy-4 align-items-center features-item">
-        <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-          <img src="assets/img/vission/MG_5624-as-Smart-Object-1.jpg" class="img-fluid" alt="">
+        @foreach ($datas as $key => $data)
+        <div class="row gy-4 align-items-center features-item">
+            @if ($key % 2 == 0)
+            <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+                <img src="{{ asset('storage/'.$data->image) }}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+                <h3>{{ $data->title }}</h3>
+                <p class="fst-italic">{!! $data->description !!}</p>
+            </div>
+            @else
+            <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+                <h3>{{ $data->title }}</h3>
+                <p class="fst-italic">{!! $data->description !!}</p>
+            </div>
+            <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+                <img src="{{ asset('storage/'.$data->image) }}" class="img-fluid" alt="">
+            </div>
+            @endif
         </div>
-        <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            <h3>Corporis temporibus maiores provident</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-            <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
-              </p>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
-              </p>
-        </div>
+        @endforeach
       </div>
     </div>
 </section>

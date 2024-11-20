@@ -25,7 +25,7 @@ Route::controller(BrandController::class)->group(function () {
 
 
 
-Route::controller(controller: VisionnaireController::class)->group(function () {
+Route::controller(VisionnaireController::class)->group(function () {
     Route::get('/visionnaire', 'visionnaire')->name('visionnaire');
 });
 
