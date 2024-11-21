@@ -59,14 +59,6 @@ class EventController extends Controller
             $event->update(['image' => $imagePath]);
         }
 
-        // Handle multiple images upload
-        // if ($request->hasFile('images')) {
-        //     foreach ($request->file('images') as $image) {
-        //         $imagePath = $image->store('event_images', 'public');
-        //         $event->images()->create(['image' => $imagePath]);
-        //     }
-        // }
-
         return redirect()->route($this->prefix.'index')->with('success', 'Event created successfully.');
     }
 
@@ -133,7 +125,6 @@ class EventController extends Controller
     {
         $event = Event::find($id);
         $event->delete();
-
         return redirect()->route($this->prefix.'index')->with('success', 'Event deleted successfully.');
     }
 

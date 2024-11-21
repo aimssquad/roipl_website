@@ -17,6 +17,8 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\VisionnaireDetailController;
+use App\Http\Controllers\Admin\ImageController;
 
 
 
@@ -69,6 +71,9 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
 
         //visionnaires
         Route::resource('visionnaires', VisionnaireController::class)->except(['show']);
+        Route::resource('visionnairedetails', VisionnaireDetailController::class)->except(['show']);
+        Route::delete('/image/delete/{id}', [ImageController::class, 'delete'])->name('image.delete');
+
 
     });
 });

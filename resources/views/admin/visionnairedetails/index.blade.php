@@ -14,25 +14,21 @@
 </div>
 <div class="row">
     <div class="col-lg-3 d-flex justify-content-start mb-3">
-        <a href="{{ route('admin.visionnaires.create') }}" class="btn btn-success me-2">
-            <i class="bi bi-plus-circle"></i> Create New Visionnaire
-        </a>
-
-        <a href="{{ route('admin.visionnairedetails.index') }}" class="btn btn-info btn-sm text-white">
-            <i class="bi bi-clipboard-plus"></i> Visionnaires Folder
+        <a href="{{ route('admin.visionnairedetails.create') }}" class="btn btn-success me-2">
+            <i class="bi bi-plus-circle"></i> Create New Visionnaire FOlder
         </a>
     </div>
-    {{-- <div class="col-lg-3 d-flex justify-content-start mb-3">
+    <div class="col-lg-3 d-flex justify-content-start mb-3">
         <form action="{{ route('admin.exportTableData') }}" method="POST" id="exportForm">
             @csrf
             <input type="hidden" name="data" id="data">
             <input type="hidden" name="headings" id="headings">
             <input type="hidden" name="filename" id="filename">
-            <input type="hidden" id="filenameInput" value="Visionnaires">
+            <input type="hidden" id="filenameInput" value="visionnaire">
 
             <button type="submit" class="btn btn-primary btn-sm">Export to Excel</button>
         </form>
-    </div> --}}
+    </div>
 </div>
 
 
@@ -43,7 +39,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Visionnaire List</h5>
+                    <h5 class="card-title">Events List</h5>
                     <table class="table datatable" id="myTable">
                         <thead>
                             <tr>
@@ -66,15 +62,14 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <!-- Edit Button -->
 
 
-                                        <a href="{{ route('admin.visionnaires.edit', $data->id) }}" class="btn btn-primary btn-sm">
+                                        <a href="{{ route('admin.visionnairedetails.edit', $data->id) }}" class="btn btn-primary btn-sm">
                                             <i class="bi bi-pencil-square"></i> Edit
                                         </a>
 
                                         <!-- Delete Form -->
-                                        <form action="{{ route('admin.visionnaires.destroy', $data->id) }}" method="POST" style="display:inline-block;">
+                                        <form action="{{ route('admin.visionnairedetails.destroy', $data->id) }}" method="POST" style="display:inline-block;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this data?')">
