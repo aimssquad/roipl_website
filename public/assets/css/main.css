@@ -1195,7 +1195,7 @@ section,
   }
 
   .featured-members .features-item+.features-item {
-    margin-top: 100px;
+    margin-top: 0px;
   }
 
   @media (max-width: 640px) {

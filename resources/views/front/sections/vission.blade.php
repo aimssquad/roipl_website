@@ -66,67 +66,28 @@
             <i class="bi bi-arrow-right-short"></i>
           </button>
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Noida</span>
-                      <h2 class="service-item-title">2020</h2>
+            @foreach ($visions as $key => $vision)
+                <div class="swiper-slide">
+                    <a href="{{ route('visionnaire-details', $vision->id) }}">
+                        <div class="service-item">
+                        <div class="service-item-contents">
+                            {{-- <span class="service-item-category">{{$vision->title}}</span> --}}
+                            <h2 class="service-item-title">{{$vision->title}}</h2>
+
+                        </div>
+                        <img src="{{ asset('storage/'.$vision->image) }}" alt="Image" class="img-fluid">
+                        </div>
                     </a>
-                  </div>
-                  <img src="assets/img/vission/4L0A2791.jpg" alt="Image" class="img-fluid">
                 </div>
-              </div>
-            <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Jaipur</span>
-                      <h2 class="service-item-title">2021</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/vission/4L0A2796.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-            <div class="swiper-slide">
-              <div class="service-item">
-                <div class="service-item-contents">
-                  <a href="#">
-                    <span class="service-item-category">Mumbai</span>
-                    <h2 class="service-item-title">2022</h2>
-                  </a>
-                </div>
-                <img src="assets/img/vission/ABHI9200.jpg" alt="Image" class="img-fluid">
-              </div>
+            @endforeach
+
             </div>
-            <div class="swiper-slide">
-              <div class="service-item">
-                <div class="service-item-contents">
-                  <a href="#">
-                    <span class="service-item-category">KOlkata</span>
-                    <h2 class="service-item-title">2023</h2>
-                  </a>
-                </div>
-                <img src="assets/img/vission/4L0A2951.jpg" alt="Image" class="img-fluid">
-              </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Dellhi</span>
-                      <h2 class="service-item-title">2024</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/vission/ABHI9306.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
 
 
 
 
           </div>
-          {{-- <div class="swiper-pagination"></div> --}}
+
         </div>
       </div>
     </div>

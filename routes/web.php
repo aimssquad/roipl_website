@@ -27,6 +27,7 @@ Route::controller(BrandController::class)->group(function () {
 
 Route::controller(VisionnaireController::class)->group(function () {
     Route::get('/visionnaire', 'visionnaire')->name('visionnaire');
+    Route::get('/visionnaire-details/{id}', 'visionnaireDetail')->name('visionnaire-details');
 });
 
 Route::controller(LorController::class)->group(function () {

@@ -30,7 +30,7 @@
         <li class="nav-item">
             <a class="nav-link @if(Request::segment(2) != 'abouts') collapsed @endif" href="{{ route('admin.abouts.index') }}">
                 <i class="bi bi-card-list"></i>
-                <span>About</span>
+                <span>Our Story</span>
             </a>
         </li>
         <li class="nav-item">

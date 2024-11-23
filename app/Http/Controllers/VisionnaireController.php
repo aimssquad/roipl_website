@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Visionnaire;
+use App\Models\VisionnaireDetail;
+use App\Models\VisionnaireDetailImage;
 
 class VisionnaireController extends Controller
 {
@@ -14,6 +16,11 @@ class VisionnaireController extends Controller
 
     public function visionnaire(Request $request){
         $datas = Visionnaire::orderBy('id', 'asc')->get();
-        return view($this->prefix.'visionnaire', compact('datas'));
+        $visions = VisionnaireDetail::orderBy('id','asc')->get();
+        return view($this->prefix.'visionnaire', compact('datas','visions'));
+    }
+    public function visionnaireDetail($id){
+        $data = VisionnaireDetail::with('images')->findOrFail($id);
+        return view($this->prefix.'visionnaire-detail', compact('data'));
     }
 }

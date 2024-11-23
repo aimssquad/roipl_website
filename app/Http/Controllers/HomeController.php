@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Brand;
 use App\Models\BrandLogo;
 use App\Models\EventFolder;
@@ -28,8 +29,9 @@ class HomeController extends Controller
 
     }
     public function about(Request $request){
+        $datas = About::orderBy('id', 'asc')->get();
         $logos = BrandLogo::all();
-        return view($this->prefix.'about',compact('logos'));
+        return view($this->prefix.'about',compact('logos','datas'));
 
     }
     public function gallery(){
