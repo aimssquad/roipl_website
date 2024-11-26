@@ -39,10 +39,10 @@ class BrandController extends Controller
         $request->validate([
             'title' => 'required|string|max:255|unique:brands,title',
             'brand_type' => 'required|string|max:255',
-            'small_description' => 'required|string|max:255',
+            'small_description' => 'nullable|string|max:255',
             'long_description' => 'nullable|string',
-            'image1' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,svg|max:2048', // Max file size 2MB
-            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,svg|max:2048',
+            'image1' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,svg|max:6048', // Max file size 2MB
+            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,svg|max:8048',
         ]);
 
         // Store the images if they exist
@@ -97,10 +97,10 @@ class BrandController extends Controller
         $request->validate([
             'title' => 'required|string|max:255|unique:brands,title,' . $brand->id,
             'brand_type' => 'required|string|max:255',
-            'small_description' => 'required|string|max:255',
+            'small_description' => 'nullable|string|max:255',
             'long_description' => 'nullable|string',
-            'image1' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,svg|max:2048',
-            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,svg|max:2048',
+            'image1' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,svg|max:6048',
+            'image2' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,svg|max:6048',
         ]);
 
         // Find the brand by ID

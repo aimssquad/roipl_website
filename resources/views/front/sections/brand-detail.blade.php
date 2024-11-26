@@ -6,7 +6,7 @@
                     <article class="article">
                         <!-- Brand Image -->
                         <div class="post-img">
-                            <img src="{{ asset('assets/img/Idee-Brand-Page-1.jpg') }}" alt="{{ $brand->title }}" class="img-fluid">
+                            <img src="{{ asset('storage/' . $brand->image2) }}" alt="{{ $brand->title }}" class="img-fluid">
                         </div>
                     </article>
                 </div>

@@ -46,7 +46,7 @@
                                 <th>Sl No</th>
                                 <th>Brand</th>
                                 <th>Brand Type</th>
-                                <th>Small Description</th>
+                                {{-- <th>Small Description</th> --}}
                                 <th>Image-1</th>
                                 <th>Image-2</th>
                                 <th>Actions</th>
@@ -58,17 +58,17 @@
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $data->title }}</td>
                                     <td>{{ ucfirst($data->brand_type) }}</td>
-                                    <td>{{ $data->small_description }}</td>
+                                    {{-- <td>{{ $data->small_description }}</td> --}}
                                     <td>
                                         @if($data->image1)
-                                            <img src="{{ asset('storage/'.$data->image1) }}" alt="Brand Image" style="max-width: 50px;">
+                                        <a href="{{ asset('storage/'.$data->image1) }}" target="_balnk"><img src="{{ asset('storage/'.$data->image1) }}" alt="Brand Image" style="max-width: 50px;"></a>
                                         @else
                                             No image
                                         @endif
                                     </td>
                                     <td>
                                         @if($data->image2)
-                                            <img src="{{ asset('storage/'.$data->image2) }}" alt="Brand Image" style="max-width: 50px;">
+                                            <a href="{{ asset('storage/'.$data->image2) }}" target="_balnk"><img src="{{ asset('storage/'.$data->image2) }}" alt="Brand Image" style="max-width: 50px;"></a>
                                         @else
                                             No image
                                         @endif

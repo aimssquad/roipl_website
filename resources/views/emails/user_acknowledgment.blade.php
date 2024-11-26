@@ -13,3 +13,14 @@
      Ronak Optik India Pvt. Ltd.</p>
 </body>
 </html>
+
+
+{{-- <!DOCTYPE html>
+<html>
+<head>
+    <title>{{ $subject }}</title>
+</head>
+<body>
+    {!! $body !!}
+</body>
+</html> --}}

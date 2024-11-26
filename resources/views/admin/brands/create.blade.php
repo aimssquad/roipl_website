@@ -55,7 +55,7 @@
                         </div>
 
                         <!-- Small Description -->
-                        <div class="row mb-3">
+                        {{-- <div class="row mb-3">
                             <label for="inputSmallDescription" class="col-sm-2 col-form-label">Small Description</label>
                             <div class="col-sm-10">
                                 <textarea name="small_description" class="form-control @error('small_description') is-invalid @enderror" id="inputSmallDescription" cols="30" rows="3" placeholder="Enter small description">{{ old('small_description') }}</textarea>
@@ -65,10 +65,10 @@
                                     </div>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
                         <!-- Long Description -->
-                        <div class="row mb-3">
+                        {{-- <div class="row mb-3">
                             <label for="inputLongDescription" class="col-sm-2 col-form-label">Long Description</label>
                             <div class="col-sm-10">
                                 <textarea class="form-control @error('long_description') is-invalid @enderror" id="long_description" name="long_description" rows="10" placeholder="Enter long description">{{ old('long_description') }}</textarea>
@@ -78,11 +78,11 @@
                                     </div>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
                         <!-- Image 1 -->
                         <div class="row mb-3">
-                            <label for="inputImage1" class="col-sm-2 col-form-label">Image 1</label>
+                            <label for="inputImage1" class="col-sm-2 col-form-label">Image</label>
                             <div class="col-sm-10">
                                 <input type="file" class="form-control @error('image1') is-invalid @enderror" id="inputImage1" name="image1" accept="image/*">
                                 @error('image1')
@@ -95,7 +95,7 @@
 
                         <!-- Image 2 -->
                         <div class="row mb-3">
-                            <label for="inputImage2" class="col-sm-2 col-form-label">Image 2</label>
+                            <label for="inputImage2" class="col-sm-2 col-form-label">Brand Page Image</label>
                             <div class="col-sm-10">
                                 <input type="file" class="form-control @error('image2') is-invalid @enderror" id="inputImage2" name="image2" accept="image/*">
                                 @error('image2')
