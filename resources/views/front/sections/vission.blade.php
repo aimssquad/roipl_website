@@ -7,17 +7,17 @@
                 <img src="{{ asset('storage/'.$data->image) }}" class="img-fluid" alt="">
             </div> --}}
             <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
-                <h3>{{ $data->title }}</h3>
+                {{-- <h3>{{ $data->title }}</h3> --}}
                 <p class="fst-italic text-justify">{!! $data->description !!}</p>
             </div>
             @else
-            <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-                <h3>{{ $data->title }}</h3>
+            <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+                {{-- <h3>{{ $data->title }}</h3> --}}
                 <p class="fst-italic text-justify">{!! $data->description !!}</p>
             </div>
-            <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            {{-- <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
                 <img src="{{ asset('storage/'.$data->image) }}" class="img-fluid" alt="">
-            </div>
+            </div> --}}
             @endif
         </div>
         @endforeach
@@ -25,10 +25,11 @@
     </div>
 </section>
 
-<section id="services-2" class="services-2 section" style="margin-top: -110px !important;">
+<section id="services-2" class="services-2 section" style="margin-top: -90px !important;">
 
     <div class="services-carousel-wrap">
       <div class="container">
+        <h2 style=" text-align: center;" class="mb-5">Glimpses of Our Years Visionnaire</h2>
         <div class="swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {
