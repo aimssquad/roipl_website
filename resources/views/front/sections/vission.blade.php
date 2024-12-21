@@ -3,10 +3,10 @@
         @foreach ($datas as $key => $data)
         <div class="row gy-4 align-items-center features-item">
             @if ($key % 2 == 0)
-            <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            {{-- <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
                 <img src="{{ asset('storage/'.$data->image) }}" class="img-fluid" alt="">
-            </div>
-            <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            </div> --}}
+            <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
                 <h3>{{ $data->title }}</h3>
                 <p class="fst-italic text-justify">{!! $data->description !!}</p>
             </div>
