@@ -26,7 +26,7 @@
                         <div class="row mb-3">
                             <label for="inputEventTitle" class="col-sm-2 col-form-label"> Title</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="inputEventTitle" name="title" value="{{ old('title', $data->title) }}" required>
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="inputEventTitle" name="title" value="{{ old('title', $data->title) }}" >
                                 @error('title')
                                     <div class="invalid-feedback">
                                         {{ $message }}

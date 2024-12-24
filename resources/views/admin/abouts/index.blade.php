@@ -65,12 +65,12 @@
                                         <!-- Edit Button -->
 
 
-                                        <a href="{{ route('admin.visionnaires.edit', $data->id) }}" class="btn btn-primary btn-sm">
+                                        <a href="{{ route('admin.abouts.edit', $data->id) }}" class="btn btn-primary btn-sm">
                                             <i class="bi bi-pencil-square"></i> Edit
                                         </a>
 
                                         <!-- Delete Form -->
-                                        <form action="{{ route('admin.visionnaires.destroy', $data->id) }}" method="POST" style="display:inline-block;">
+                                        <form action="{{ route('admin.abouts.destroy', $data->id) }}" method="POST" style="display:inline-block;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this data?')">

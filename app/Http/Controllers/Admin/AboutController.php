@@ -18,6 +18,7 @@ class AboutController extends Controller
     }
     public function index()
     {
+
         $datas = About::all();
         return view($this->prefix.'index', compact('datas'));
     }
@@ -37,7 +38,7 @@ class AboutController extends Controller
     {
 
         $validated = $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'nullable|string|max:455',
             'description' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048', // Single image
         ]);
@@ -80,7 +81,7 @@ class AboutController extends Controller
         $data = About::findOrFail($id);
 
         $validated = $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'nullable|string|max:455',
             'description' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:4048', // Single image
         ]);
