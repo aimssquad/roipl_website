@@ -34,7 +34,7 @@
               "loop": true,
               "speed": 600,
               "autoplay": {
-                "delay": 5000
+                "delay": 4000
               },
               "slidesPerView": "auto",
               "pagination": {
@@ -52,7 +52,7 @@
                   "spaceBetween": 20
                 },
                 "1200": {
-                  "slidesPerView": 4,
+                  "slidesPerView": 3,
                   "spaceBetween": 20
                 }
               }
@@ -67,11 +67,11 @@
           <div class="swiper-wrapper">
             @foreach ($team as $key => $vision)
                 <div class="swiper-slide">
-                    <a href="{{ route('visionnaire-details', $vision->id) }}">
+                    <a href="#">
                         <div class="service-item">
                         <div class="service-item-contents">
                             {{-- <span class="service-item-category">{{$vision->title}}</span> --}}
-                            {{-- <h2 class="service-item-title">{{$vision->title}}</h2> --}}
+                            <h2 class="service-item-title">{{$vision->title}}</h2>
 
                         </div>
                         <img src="{{ asset('storage/'.$vision->image) }}" alt="Image" class="img-fluid">
