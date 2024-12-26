@@ -67,7 +67,7 @@
           <div class="swiper-wrapper">
             @foreach ($team as $key => $vision)
                 <div class="swiper-slide">
-                    <a href="#">
+                    <a href="{{ asset('storage/' . $vision->image) }}"  class="glightbox preview-link">
                         <div class="service-item">
                         <div class="service-item-contents">
                             {{-- <span class="service-item-category">{{$vision->title}}</span> --}}
