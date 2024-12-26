@@ -65,13 +65,13 @@
             <i class="bi bi-arrow-right-short"></i>
           </button>
           <div class="swiper-wrapper">
-            @foreach ($data as $key => $vision)
+            @foreach ($team as $key => $vision)
                 <div class="swiper-slide">
                     <a href="{{ route('visionnaire-details', $vision->id) }}">
                         <div class="service-item">
                         <div class="service-item-contents">
                             {{-- <span class="service-item-category">{{$vision->title}}</span> --}}
-                            <h2 class="service-item-title">{{$vision->title}}</h2>
+                            {{-- <h2 class="service-item-title">{{$vision->title}}</h2> --}}
 
                         </div>
                         <img src="{{ asset('storage/'.$vision->image) }}" alt="Image" class="img-fluid">
