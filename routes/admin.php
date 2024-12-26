@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\EventFolderController;
 use App\Http\Controllers\Admin\EventFolderImageController;
 use App\Http\Controllers\Admin\EventImageController;
 use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VisionnaireController;
 use App\Http\Controllers\ExportController;
@@ -19,6 +20,7 @@ use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\VisionnaireDetailController;
 use App\Http\Controllers\Admin\ImageController;
+
 
 
 
@@ -54,6 +56,7 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
         Route::post('/careers/update-status', [CareerController::class, 'updateStatus'])->name('careers.updateStatus');
         Route::post('/export-table-data', [ExportController::class, 'exportTableData'])->name('exportTableData');
         Route::resource('brandlogos', BrandLogoController::class)->except(['show']);
+        Route::resource('teams', TeamController::class)->except(['show']);
 
         Route::resource('events', EventController::class)->except(['show']);
         Route::get('addEvent/{id}', [EventController::class, 'addEvent'])->name('add-event');

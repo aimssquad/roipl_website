@@ -8,6 +8,7 @@ use App\Models\BrandLogo;
 use App\Models\EventFolder;
 use App\Models\EventFolderImage;
 use App\Models\Event;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -55,6 +56,8 @@ class HomeController extends Controller
 
     }
     public function teams(Request $request){
-        return view($this->prefix.'teams');
+
+        $team = Team::orderBy('order_by', 'asc')->get();
+        return view($this->prefix.'teams',compact('team'));
     }
 }

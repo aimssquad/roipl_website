@@ -58,6 +58,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link @if(Request::segment(2) != 'teams') collapsed @endif" href="{{ route('admin.teams.index') }}">
+                <i class="bi bi-card-list"></i>
+                <span>Teams</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link @if(Request::segment(2) != 'contacts') collapsed @endif" href="{{ route('admin.contacts.index') }}">
                 <i class="bi bi-card-list"></i>
                 <span>Contacts</span>
