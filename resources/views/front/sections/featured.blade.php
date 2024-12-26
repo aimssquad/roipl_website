@@ -3,7 +3,7 @@
     <div class="container">
 
         <!-- Top Margin -->
-        <div class="row mb-4"></div>
+        <div class="row mb-1"></div>
 
         <div class="row gy-4 align-items-center features-item">
             @foreach($datas as $index => $data)
