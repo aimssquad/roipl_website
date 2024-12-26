@@ -23,27 +23,71 @@
     </div>
 </section>
 
-<!-- Gallery Section -->
-<section id="gallery" class="gallery section" style="padding: 35px 0 !important;margin-top: -50px !important;">
+<section id="services-2" class="services-2 section" style="margin-top: -90px !important;">
 
-    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    <div class="services-carousel-wrap">
+      <div class="container">
+        {{-- <h2 style=" text-align: center;" class="mb-5">Glimpses of Our Yearly Visionnaire</h2> --}}
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "navigation": {
+                "nextEl": ".js-custom-next",
+                "prevEl": ".js-custom-prev"
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <button class="navigation-prev js-custom-prev">
+            <i class="bi bi-arrow-left-short"></i>
+          </button>
+          <button class="navigation-next js-custom-next">
+            <i class="bi bi-arrow-right-short"></i>
+          </button>
+          <div class="swiper-wrapper">
+            @foreach ($data as $key => $vision)
+                <div class="swiper-slide">
+                    <a href="{{ route('visionnaire-details', $vision->id) }}">
+                        <div class="service-item">
+                        <div class="service-item-contents">
+                            {{-- <span class="service-item-category">{{$vision->title}}</span> --}}
+                            <h2 class="service-item-title">{{$vision->title}}</h2>
 
-      <div class="row gy-4 justify-content-center">
-        @foreach ($team as $image)
-            <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-                <img src="{{ asset('storage/' . $image->image) }}" class="img-fluid" alt="{{ asset($image->image) }}">
-                <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="{{ asset('storage/' . $image->image) }}"  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-
+                        </div>
+                        <img src="{{ asset('storage/'.$vision->image) }}" alt="Image" class="img-fluid">
+                        </div>
+                    </a>
                 </div>
-            </div>
-            </div>
-        @endforeach
+            @endforeach
 
+            </div>
+
+
+
+
+          </div>
+
+        </div>
       </div>
-
     </div>
-
-  </section><!-- /Gallery Section -->
-
+  </section><!-- /Services 2 Section -->
