@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class VisionnaireDetail extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'image'];
+    protected $fillable = ['title','sub_title', 'image'];
 
     public function images()
     {
