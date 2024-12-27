@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 
 @section('content')
-@include('front.partials.page-title', ['title' => $data->title, 'current' => $data->title])
+
 
 <div class="page-title dark-background">
     <div class="container">
