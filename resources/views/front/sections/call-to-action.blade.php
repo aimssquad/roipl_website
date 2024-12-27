@@ -1,6 +1,6 @@
 <section id="call-to-action" class="call-to-action section dark-background">
 
-    <img src="{{asset('assets/img/callto-1.webp')}}" alt="">
+    <img src="{{asset('assets/img/callto-1-new.webp')}}" alt="">
 
     <div class="container">
       <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
