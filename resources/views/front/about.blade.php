@@ -1,7 +1,11 @@
 @extends('front.layouts.app')
 
 @section('content')
-    @include('front.partials.page-title', ['title' => 'Our Story', 'current' => 'Our Story'])
+<div class="page-title page-title dark-background" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('{{ asset('assets/img/Our-Story-top-banner.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 50vh;">
+    <div class="container">
+        <h1>Our Story</h1>
+    </div>
+</div>
     @include('front.sections.featured')
     @include('front.sections.clients')
 
