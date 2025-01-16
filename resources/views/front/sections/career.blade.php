@@ -2,10 +2,14 @@
 <section id="contact" class="contact section">
 
     <!-- Section Title -->
-    {{-- <div class="container section-title" data-aos="fade-up">
-      <span class="description-title">Careers</span>
-      <h2>Careers</h2>
-    </div> --}}
+    <div class="container " data-aos="fade-up">
+     <p><b>Join Our Visionary Team:</b>
+
+        At Ronak Optik, we believe in shaping the world of eyewear with passion, precision, and purpose. For over 30+ years, we’ve been at the forefront of delivering high-quality eyewear and exceptional customer service. Behind every frame and every lens is a team dedicated to innovation, excellence, and customer delight.
+
+       <br> We’re always on the lookout for talented individuals to join our team. Apply NOW.
+        </p><br>
+    </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 

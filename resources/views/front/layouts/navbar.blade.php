@@ -20,6 +20,7 @@
                     </ul> --}}
                 {{-- <li> --}}
                 <li><a href="{{ route('visionnaire') }}" class="{{ Route::currentRouteName() == 'visionnaire' ? 'active' : '' }}">Visionnaire</a></li>
+                <li><a href="{{ route('careers.index') }}" class="{{ Route::currentRouteName() == 'careers' ? 'active' : '' }}">Careers</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

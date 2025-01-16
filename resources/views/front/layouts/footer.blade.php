@@ -18,9 +18,9 @@
                 </div>
                 <div class="social-links d-flex mt-4">
                     {{-- <a href=""><i class="bi bi-twitter-x"></i></a> --}}
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100094746841483&mibextid=ZbWKwL" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/ronakoptik?igsh=c3JreWEyMzZnMnpx" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/ronak-optik-india-private-limited/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
 
@@ -31,7 +31,7 @@
                     <li><a href="{{ route('careers.index') }}" class="{{ Request::is('careers') ? 'active' : '' }}">Careers</a></li>
                     {{-- <li><a href="#" class="{{ Request::is('csr') ? 'active' : '' }}">CSR</a></li> --}}
                     <li><a href="{{ route('contact') }}" class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact Us</a></li>
-                    <li><a href="#" class="{{ Request::is('team') ? 'active' : '' }}">Team & Board</a></li>
+                    {{-- <li><a href="#" class="{{ Request::is('team') ? 'active' : '' }}">Team & Board</a></li> --}}
                 </ul>
             </div>
 

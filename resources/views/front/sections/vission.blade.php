@@ -29,7 +29,7 @@
 
     <div class="services-carousel-wrap">
       <div class="container">
-        <h2 style=" text-align: center;" class="mb-5">Glimpses of Our Yearly Visionnaire</h2>
+        <h2 style=" text-align: center;" class="mb-5">Glimpses of Visionnaire</h2>
         <div class="swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {
@@ -73,8 +73,8 @@
                         <div class="service-item">
                         <div class="service-item-contents">
                             {{-- <span class="service-item-category">{{$vision->title}}</span> --}}
-                            <h2 class="service-item-title text-center">{{$vision->title}}</h2>
-                            <h3 class="service-item-title text-center">{{$vision->sub_title}}</h3>
+                            <h2 class="service-item-title text-center" style="color: black">{{$vision->title}}</h2>
+                            <h3 class="service-item-title text-center" style="color: black">{{$vision->sub_title}}</h3>
 
                         </div>
                         <img src="{{ asset('storage/'.$vision->image) }}" alt="Image" class="img-fluid">
