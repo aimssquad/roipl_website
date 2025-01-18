@@ -107,6 +107,9 @@
     background-repeat: no-repeat;
     transition: background-image 1s ease-in-out;
 }
+
+
+
 @media (max-width: 1199px) {
     #backgroundSlider {
         height: 45vh; /* Adjust to give more space vertically */
@@ -130,5 +133,93 @@
     }
 }
 
+
+
+.events-section {
+    margin-top: 50px;
+    padding: 0 15px; /* Add padding for mobile edges */
+}
+
+.event-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* Space between cards on smaller screens */
+}
+
+.event-card:hover {
+    transform: scale(1.03);
+}
+
+.event-card-img img {
+    border-radius: 5px 5px 0 0;
+    width: 100%; /* Ensure images fill their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.event-card-body {
+    padding: 15px;
+}
+
+.events-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Adds space above and below the banner */
+}
+
+.events-banner img {
+    width: 100%; /* Makes the image take up the full width of the container */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image scales nicely */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .event-card {
+        margin-bottom: 15px;
+    }
+
+    .event-card-body {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .events-banner img {
+        margin-top: 15px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .event-card {
+        margin-bottom: 10px;
+    }
+
+    .event-card-body {
+        padding: 8px;
+    }
+
+    .events-banner img {
+        border-radius: 8px;
+    }
+}
+
+.event-link {
+    color: #010203 !important; /* Default link color (blue) */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.event-link:hover {
+    color: #010203 !important; /* Darker blue on hover */
+    text-decoration: none; /* Optional underline on hover */
+}
+
+.event-link:visited {
+    color: #6c757d; /* Optional visited color (grayish) */
+}
 
 

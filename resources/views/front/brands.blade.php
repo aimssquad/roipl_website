@@ -24,7 +24,7 @@
    document.addEventListener("DOMContentLoaded", function() {
     const images = [
         "{{ asset('assets/img/banner/BrandBanner2.webp') }}",
-        "{{ asset('assets/img/banner/BrandBanner3.webp') }}",
+        "{{ asset('assets/img/banner/BrandBanner-3.webp') }}",
         "{{ asset('assets/img/banner/BrandBanner4.webp') }}",
         "{{ asset('assets/img/banner/BrandBanner1.webp') }}"
     ];
