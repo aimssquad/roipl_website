@@ -30,7 +30,7 @@
             <!-- Insert the banner after the first row of events -->
             @if($index == 0)
                 <div class="events-banner">
-                    <img src="{{ asset('assets/img/cta-bg.jpg') }}" alt="Banner Image" class="img-fluid">
+                    <img src="{{ asset('assets/img/lar.jpg') }}" alt="Banner Image" class="img-fluid">
                 </div>
             @endif
         @endforeach
