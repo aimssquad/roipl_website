@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <h2>We Are For Sight</h2>
-                <p>Bringing you the best of world-class eyewear that catches your eye.</p>
+                <p>Bringing You Exceptional Eyewear That Catches Your Eye.</p>
                 {{-- <a href="#about" class="btn-get-started">Get Started</a> --}}
             </div>
         </div>
