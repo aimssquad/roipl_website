@@ -29,7 +29,7 @@
 
     <div class="services-carousel-wrap">
       <div class="container">
-        <h2 style=" text-align: center;" class="mb-5">Glimpses of Visionnaire</h2>
+        <h2 style=" text-align: center;" class="mb-5">Visionnaire through the years</h2>
         <div class="swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {

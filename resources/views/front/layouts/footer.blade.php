@@ -64,8 +64,7 @@
 
     <div class="container copyright text-center mt-4">
 
-        <p> &copy; <?php echo date('Y'); ?> Ronak Optik India Pvt. Ltd. All Rights Reserved<br>
-            Designed by Ronak Optik India Pvt. Ltd.</p>
+        <p> &copy; <?php echo date('Y'); ?> Ronak Optik India Pvt. Ltd. All Rights Reserved</p>
         {{-- <div class="credits">
             Designed by <a href="#">Ronak Optik India Pvt. Ltd.</a>
         </div> --}}

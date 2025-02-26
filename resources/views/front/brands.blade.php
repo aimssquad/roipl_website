@@ -7,19 +7,19 @@
     </div>
 </div> --}}
 
-<div class="page-title-brand page-title dark-background" id="backgroundSlider">
+{{-- <div class="page-title-brand page-title dark-background" id="backgroundSlider">
 
-</div>
+</div> --}}
 
 
-
+{{-- @include('front.partials.page-title', ['title' => 'Brands', 'current' => 'Brands']) --}}
 
 @include('front.sections.brand')
 {{-- @include('front.sections.portfolio') --}}
 {{-- @include('front.sections.client-detail') --}}
 @endsection
 
-@section('script')
+{{-- @section('script')
 <script>
    document.addEventListener("DOMContentLoaded", function() {
     const images = [
@@ -40,4 +40,4 @@
     changeBackground();
 });
 </script>
-@endsection
+@endsection --}}
