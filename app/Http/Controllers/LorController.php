@@ -18,7 +18,9 @@ class LorController extends Controller
         return view($this->prefix.'events', compact('datas'));
     }
     public function eventDetails(Event $event){
+
         $folders = $event->folders;
+
         return view($this->prefix . 'events-details', compact('event','folders'));
 
     }

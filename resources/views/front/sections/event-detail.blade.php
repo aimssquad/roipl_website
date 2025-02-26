@@ -1,4 +1,21 @@
-<section id="blog-posts-2" class="blog-posts-2 section">
+<section id="featured-members" class="featured-members section">
+    <div class="container">
+
+        <div class="row gy-4 align-items-center features-item">
+
+            <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+                {{-- <h3>{{ $data->title }}</h3> --}}
+                <p class="text-justify">
+                    {!! $event->description !!}
+                </p>
+
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section id="blog-posts-2" class="blog-posts-2 section" style="margin-top: -90px !important;">
     <div class="container">
 
 

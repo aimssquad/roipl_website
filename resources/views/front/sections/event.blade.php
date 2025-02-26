@@ -13,12 +13,12 @@
                                 </a>
                             </div>
                             <div class="event-card-body card-body">
-                                <h5 class="event-card-title card-title">
+                                <h5 class="event-card-title card-title text-center">
                                     <a href="{{ route('event-details', $event->id) }}" class="event-link">{{ $event->title }}</a>
                                 </h5>
-                                <p class="event-card-text card-text">
+                                {{-- <p class="event-card-text card-text">
                                     {!! $event->description !!}
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                     </div>
