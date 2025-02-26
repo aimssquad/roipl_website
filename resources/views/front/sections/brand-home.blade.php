@@ -17,7 +17,7 @@
                 </div>
             </div>
 
-            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="50">
                 @foreach($brands as $brand)
                     <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-{{ strtolower($brand->brand_type) }}">
                         <div class="portfolio-content h-100">

@@ -1,11 +1,11 @@
 <section id="portfolio" class="portfolio section " style="background: url('{{ asset('assets/img/brand2.jpg') }}') no-repeat center center/cover;">
-    {{-- <div class="container section-title" data-aos="fade-up">
+    <div class="container section-title" data-aos="fade-up">
         <h1 style="color: white !important;margin-top: 110px;margin-bottom: 70px;"> Brands</h1>
-    </div> --}}
+    </div>
     <div class="container px-6">
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
             <div class="row align-items-center">
-                <div class="col-lg-12 text-center text-lg-center" style="margin-top: -50px !important;">
+                <div class="col-lg-12 text-center text-lg-center">
                     <ul class="portfolio-filters isotope-filters white-text-color" data-aos="fade-up" data-aos-delay="100">
                         <li data-filter="*" class="filter-active">All</li>
                         @foreach($brands->unique('brand_type') as $brand)
