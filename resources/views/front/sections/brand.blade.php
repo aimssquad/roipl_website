@@ -1,6 +1,6 @@
 <section id="portfolio" class="portfolio section " style="background: url('{{ asset('assets/img/brand2.jpg') }}') no-repeat center center/cover;">
     <div class="container section-title" data-aos="fade-up">
-        <h1 style="color: white !important;margin-top: 110px;margin-bottom: 70px;">Our Brand</h1>
+        <h1 style="color: white !important;margin-top: 110px;margin-bottom: 70px;"> Brands</h1>
     </div>
     <div class="container px-6">
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
