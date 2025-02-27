@@ -5,7 +5,7 @@
 
             <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
                 {{-- <h3>{{ $data->title }}</h3> --}}
-                <p class="text-justify">
+                <p class="text-justify" style="margin-top: -30px;text-align: justify;">
                     {!! $event->description !!}
                 </p>
 
