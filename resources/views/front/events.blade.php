@@ -1,11 +1,13 @@
 @extends('front.layouts.app')
 
 @section('content')
-<div class="page-title dark-background" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{asset('assets/img/Life-at-ROIPL.jpg')}}'); background-size: cover; background-position: center;height: 70vh;">
+{{-- <div class="page-title dark-background" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{asset('assets/img/Life-at-ROIPL.jpg')}}'); background-size: cover; background-position: center;height: 70vh;">
     <div class="container">
         <h1 style="color: white !important;">Life at ROIPL</h1>
     </div>
-</div>
+</div> --}}
+
+@include('front.partials.page-title', ['title' => 'Life at ROIPL', 'current' => 'Life at ROIPL'])
 
 {{-- <div class="page-title page-title dark-background" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), background-size: cover; background-position: center; background-repeat: no-repeat; height: 50vh;">
     <div class="container">
