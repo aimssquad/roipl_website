@@ -22,7 +22,7 @@
                     <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-{{ strtolower($brand->brand_type) }}">
                         <div class="portfolio-content h-100">
                             @if($brand->image1)
-                                <a href="{{ route('brand-details', $brand->id) }}" title="More Details" class="details-link">
+                                <a href="{{ route('brand-details', $brand->title) }}" title="More Details" class="details-link">
                                     <img src="{{ asset('storage/'.$brand->image1) }}" class="img-fluid" alt="{{ $brand->title }}">
                                 </a>
                             @else

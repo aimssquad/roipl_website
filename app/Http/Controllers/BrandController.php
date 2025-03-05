@@ -15,8 +15,10 @@ class BrandController extends Controller
         $brands = Brand::all();
         return view($this->prefix.'brands', compact('brands'));
     }
-    public function brandDetails($id) {
-        $brand = Brand::findOrFail($id);
-        return view($this->prefix . 'brand-details', compact('brand'));
+    public function brandDetails($title) {
+        $brand = Brand::where('title', $title)->firstOrFail();
+        $pageTitle = $brand->title;
+
+        return view($this->prefix . 'brand-details', compact('brand', 'pageTitle'));
     }
 }
