@@ -1,7 +1,11 @@
 @extends('front.layouts.app')
 
 @section('content')
-    @include('front.partials.page-title', ['title' => 'Careers', 'current' => 'Careers'])
+    <div class="page-title page-title dark-background" style="background:   url('{{ asset('assets/img/topBanner/Careers.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 50vh;">
+        <div class="container">
+            <h1>Careers</h1>
+        </div>
+    </div>
 
     @include('front.sections.career')
 
