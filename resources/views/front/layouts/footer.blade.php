@@ -31,7 +31,7 @@
                     <li><a href="{{ route('careers.index') }}" class="{{ Request::is('careers') ? 'active' : '' }}">Careers</a></li>
                     {{-- <li><a href="#" class="{{ Request::is('csr') ? 'active' : '' }}">CSR</a></li> --}}
                     <li><a href="{{ route('contact') }}" class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact Us</a></li>
-                    {{-- <li><a href="#" class="{{ Request::is('team') ? 'active' : '' }}">Team & Board</a></li> --}}
+                    <li><a href="{{ route('announcement') }}" class="{{ Request::is('announcement') ? 'active' : '' }}">Announcement</a></li>
                 </ul>
             </div>
 

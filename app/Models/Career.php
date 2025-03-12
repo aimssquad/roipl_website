@@ -9,7 +9,7 @@ class Career extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name', 'email', 'state_id','city_id', 'department', 'phone_number', 'cv'
+        'name', 'email', 'state_id','city_id', 'department_id', 'phone_number', 'cv'
     ];
 
     public function state()

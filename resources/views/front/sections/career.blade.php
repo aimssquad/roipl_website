@@ -1,4 +1,5 @@
 
+
 <section id="contact" class="contact section">
 
     <!-- Section Title -->
@@ -7,7 +8,7 @@
 
         At Ronak Optik, we believe in shaping the world of eyewear with passion, precision, and purpose. For over 30+ years, we’ve been at the forefront of delivering high-quality eyewear and exceptional customer service. Behind every frame and every lens is a team dedicated to innovation, excellence, and customer delight.
 
-       <br> We’re always on the lookout for talented individuals to join our team. Apply NOW.
+       <br> Apply below to join the ROIPL team.
         </p><br>
     </div>
 
@@ -91,10 +92,21 @@
                     <input type="text" id="captcha-input" name="captcha" class="form-control" required>
                 </div>
 
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <input type="checkbox" id="consent-checkbox" class="form-check-input">
+                        <label class="form-check-label" for="consent-checkbox">
+                            I do hereby confirm that the information provided in my resume is true and correct.
+                            I give my consent to process personal data for the job application.
+                        </label>
+                    </div>
+                </div>
+
                 <!-- Submit Button -->
                 <div class="col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary" id="upload-btn">Upload</button>
+                    <button type="submit" class="btn btn-primary" id="upload-btn" disabled>Upload</button>
                 </div>
+
             </div>
         </form>
 
@@ -148,7 +160,14 @@ document.getElementById('state').addEventListener('change', function() {
         document.getElementById('city').innerHTML = '<option value="">Select City</option>';
     }
 });
+    document.addEventListener("DOMContentLoaded", function() {
+        const checkbox = document.getElementById("consent-checkbox");
+        const submitBtn = document.getElementById("upload-btn");
 
+        checkbox.addEventListener("change", function() {
+            submitBtn.disabled = !checkbox.checked;
+        });
+    });
 
 
 

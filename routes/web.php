@@ -8,7 +8,7 @@ use App\Http\Controllers\VisionnaireController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BrandController;
-
+use App\Http\Controllers\AnnouncementController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('index');
@@ -21,6 +21,11 @@ Route::controller(HomeController::class)->group(function () {
 Route::controller(BrandController::class)->group(function () {
     Route::get('/brands', 'brands')->name('brands');
     Route::get('/brand-details/{id}', 'brandDetails')->name('brand-details');
+});
+
+Route::controller(AnnouncementController::class)->group(function () {
+    Route::get('/announcement', 'index')->name('announcement');
+    Route::get('/announcement-details/{id}', 'details')->name('announcement-details');
 });
 
 
