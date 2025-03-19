@@ -15,7 +15,7 @@
     let header = document.querySelector(".page-title");
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 30) {
             header.style.height = "25vh"; // Change height when scrolled
         } else {
             header.style.height = "14vh"; // Reset to default height
