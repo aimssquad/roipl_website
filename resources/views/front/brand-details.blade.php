@@ -1,5 +1,16 @@
 @extends('front.layouts.app')
 
+@section('css')
+
+<style>
+    .expanded-header {
+        height: 25vh !important;
+        transition: height 0.3s ease-in-out;
+    }
+</style>
+
+@endsection
+
 @section('content')
 <div class="page-title page-title dark-background" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('{{ asset('assets/img/brand2.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 14vh;padding:0;">
     {{-- <div class="container">
@@ -11,14 +22,14 @@
 
 @section('script')
 <script>
-   document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     let header = document.querySelector(".page-title");
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 30) {
-            header.style.height = "25vh"; // Change height when scrolled
+        if (window.scrollY > 20) {
+            header.classList.add("expanded-header");
         } else {
-            header.style.height = "14vh"; // Reset to default height
+            header.classList.remove("expanded-header");
         }
     });
 });
