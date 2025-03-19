@@ -15,6 +15,12 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+{{--
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> --}}
+
+  {{-- <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;700&display=swap" rel="stylesheet"> --}}
+  {{-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> --}}
+  {{-- <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Work+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"> --}}
 
   <!-- Vendor CSS Files -->
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">

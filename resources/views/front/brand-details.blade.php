@@ -8,3 +8,19 @@
 </div>
 @include('front.sections.brand-detail')
 @endsection
+
+@section('script')
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    let header = document.querySelector(".page-title");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            header.style.height = "25vh"; // Change height when scrolled
+        } else {
+            header.style.height = "14vh"; // Reset to default height
+        }
+    });
+});
+</script>
+@endsection

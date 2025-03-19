@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VisionnaireController;
+use App\Http\Controllers\Admin\AnnouncementController;
 use App\Http\Controllers\ExportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
@@ -52,6 +53,7 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
         Route::resource('users', UserController::class)->except(['show']);
         Route::resource('contacts', ContactController::class)->except(['show']);
         Route::resource('careers', CareerController::class)->except(['show']);
+        Route::resource('announcements', AnnouncementController::class)->except(['show']);
         Route::post('/contacts/update-status', [ContactController::class, 'updateStatus'])->name('contacts.updateStatus');
         Route::post('/careers/update-status', [CareerController::class, 'updateStatus'])->name('careers.updateStatus');
         Route::post('/export-table-data', [ExportController::class, 'exportTableData'])->name('exportTableData');

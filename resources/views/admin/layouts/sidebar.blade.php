@@ -34,6 +34,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link @if(Request::segment(2) != 'announcements') collapsed @endif" href="{{ route('admin.announcements.index') }}">
+                <i class="bi bi-card-list"></i>
+                <span>Announcement</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link @if(Request::segment(2) != 'brands') collapsed @endif" href="{{ route('admin.brands.index') }}">
                 <i class="bi bi-card-list"></i>
                 <span>Brand</span>

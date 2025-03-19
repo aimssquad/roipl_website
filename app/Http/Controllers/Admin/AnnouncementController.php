@@ -3,23 +3,21 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Career;
 use Illuminate\Http\Request;
-use Storage;
+use App\Models\Announcement;
 
-class CareerController extends Controller
+class AnnouncementController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     protected $prefix;
     public function __construct(){
-        $this->prefix = 'admin.careers.';
+        $this->prefix = 'admin.announcements.';
     }
     public function index()
     {
-        $datas = Career::with(['state', 'city','department'])->orderBy('id', 'desc')->get();
-        // dd($datas);
+        $datas = Announcement::all();
         return view($this->prefix.'index', compact('datas'));
     }
 
@@ -68,25 +66,6 @@ class CareerController extends Controller
      */
     public function destroy(string $id)
     {
-        $career = Career::findOrFail($id);
-        if ($career->image1 && Storage::exists('public/' . $career->cv)) {
-            Storage::delete('public/' . $career->cv);
-        }
-        $career->delete();
-
-        return redirect()->route($this->prefix.'index')->with('success', ' Deleted successfully.');
-    }
-    public function updateStatus(Request $request)
-    {
-        $career = Career::find($request->id);
-
-        if ($career) {
-            $career->status = $request->status;
-            $career->save();
-
-            return response()->json(['success' => true, 'message' => 'Status updated successfully']);
-        }
-
-        return response()->json(['success' => false, 'message' => 'Career not found']);
+        //
     }
 }

@@ -1,10 +1,10 @@
 <footer id="footer" class="footer">
     <div class="copyright">
-        &copy; Copyright <strong><span>Ronak Optical</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Ronak optik</span></strong>. All Rights Reserved
     </div>
-    <div class="credits">
-        Designed by <a href="#">Ronak optical pvt Ltd</a>
-    </div>
+    {{-- <div class="credits">
+        Designed by <a href="#">Ronak optik pvt Ltd</a>
+    </div> --}}
 </footer>
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
