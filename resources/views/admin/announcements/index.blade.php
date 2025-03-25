@@ -55,10 +55,10 @@
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $data->title }}</td>
-                                    <td>{{ Str::limit($data->content, 50) }}</td>
+                                    <td>{{ Str::limit($data->small_description, 50) }}</td>
                                     <td>
-                                        @if($data->image)
-                                            <img src="{{ asset('storage/'.$data->image1) }}" alt=" Image" style="max-width: 50px;">
+                                        @if($data->image1)
+                                            <a href="{{ asset('storage/'.$data->image1) }}" target="_blank"><img src="{{ asset('storage/'.$data->image1) }}" alt=" Image" style="max-width: 50px;"></a>
                                         @else
                                             No image
                                         @endif
