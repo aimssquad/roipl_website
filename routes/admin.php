@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\EventFolderController;
 use App\Http\Controllers\Admin\EventFolderImageController;
 use App\Http\Controllers\Admin\EventImageController;
+use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\UserController;
@@ -54,6 +55,7 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
         Route::resource('contacts', ContactController::class)->except(['show']);
         Route::resource('careers', CareerController::class)->except(['show']);
         Route::resource('announcements', AnnouncementController::class)->except(['show']);
+        Route::resource('pages', PageController::class)->except(['show']);
         Route::post('/contacts/update-status', [ContactController::class, 'updateStatus'])->name('contacts.updateStatus');
         Route::post('/careers/update-status', [CareerController::class, 'updateStatus'])->name('careers.updateStatus');
         Route::post('/export-table-data', [ExportController::class, 'exportTableData'])->name('exportTableData');

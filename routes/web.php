@@ -4,6 +4,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\LorController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\VisionnaireController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -27,7 +28,10 @@ Route::controller(AnnouncementController::class)->group(function () {
     Route::get('/announcement', 'index')->name('announcement');
     Route::get('/announcement-details/{id}', 'details')->name('announcement-details');
 });
-
+Route::controller(PageController::class)->group(function () {
+    Route::get('/page', 'index')->name('page');
+    Route::get('/page-details/{slug}', 'details')->name('page-details');
+});
 
 
 Route::controller(VisionnaireController::class)->group(function () {

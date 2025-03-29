@@ -81,6 +81,12 @@
                 <span>Careers</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link @if(Request::segment(2) != 'pages') collapsed @endif" href="{{ route('admin.pages.index') }}">
+                <i class="bi bi-card-list"></i>
+                <span>Pages</span>
+            </a>
+        </li>
 
 
 

@@ -33,6 +33,11 @@
                     <li><a href="{{ route('contact') }}" class="{{ Route::currentRouteName() == 'contact' ? 'active' : '' }}">Contact Us</a></li>
                     <li><a href="{{ route('announcement') }}" class="{{ Request::is('announcement') ? 'active' : '' }}">Announcement</a></li>
                 </ul>
+                <h4 class="mt-2">Policies</h4>
+                <ul>
+                    <li><a href="{{ route('page-details', ['slug' => 'privacy-policy']) }}" class="{{ Request::is('careers') ? 'active' : '' }}" target="_blank">Privacy Policy</a></li>
+                    <li><a href="{{ route('page-details', ['slug' => 'terms-conditions']) }}" class="{{ Request::is('careers') ? 'active' : '' }}" target="_blank">Terms & Conditions</a></li>
+                </ul>
             </div>
 
             {{-- <div class="col-lg-2 col-md-3 footer-links">
