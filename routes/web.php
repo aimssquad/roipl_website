@@ -55,4 +55,8 @@ Route::resource('careers', CareerController::class);
 Route::get('/refresh-captcha', function() {
     return response()->json(['captcha' => captcha_src('math')]);
 });
+
+
+
+
 require __DIR__.'/admin.php';
