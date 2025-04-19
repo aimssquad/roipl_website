@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Happy Work Anniversary!</title>
+    <title>{{ $subject }}</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -70,27 +70,9 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="content-box">
-            <div class="header">🎉 Happy Work Anniversary! 🎉</div>
-
-            <img src="https://ronakoptik.com/assets/img/Ronak%20Logo.png" class="logo" alt="Company Logo">
-
-            <h2>Dear {{ $employee->name }},</h2>
-            <p><span style="font-size: 22px; font-weight: bold;">Congratulations</span> on completing another fantastic year with <strong>Ronak Optik India</strong>! 🎊</p>
-
-            <div class="years">
-                🎯 🎯 You've completed <strong>{{ $years }}</strong> amazing {{ $years == 1 ? 'year' : 'years' }}!
-            </div>
-
-            <p>We truly appreciate your dedication, hard work, and contributions to our team. Your efforts help us grow and succeed every day.</p>
-            <p>Thank you for being a valuable part of our organization. Wishing you continued success in the years ahead!</p>
-
-            <!-- <div class="footer" style="text-align: left;">
-                <p>Best Regards,</p>
-                <p><strong>Ronak Optik</strong></p>
-            </div> -->
-        </div>
-    </div>
+    {!! $body !!}
 </body>
 </html>
+
+
+
