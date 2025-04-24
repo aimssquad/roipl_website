@@ -3,8 +3,8 @@
 
       <article class="article">
 
-        <div class="post-img">
-          <img src="{{ asset('storage/'.$announcement->image1) }}" alt="" class="img-fluid">
+        <div class="post-img d-flex justify-content-center">
+            <img src="{{ asset('storage/'.$announcement->image1) }}" alt="" class="img-fluid">
         </div>
 
         <h2 class="title">{{ $announcement->title }}</h2>

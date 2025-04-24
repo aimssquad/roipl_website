@@ -22,7 +22,9 @@
 
         <hr>
 
-        <a href="{{ route('announcement-details', ['id' => $announcement->id]) }}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+        <a href="{{ route('announcement-details', ['id' => $announcement->id, 'slug' => Str::slug($announcement->title)]) }}" class="readmore stretched-link">
+            <span>Read More</span><i class="bi bi-arrow-right"></i>
+        </a>
 
       </div>
 

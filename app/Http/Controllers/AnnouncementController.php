@@ -16,8 +16,9 @@ class AnnouncementController extends Controller
         return view($this->prefix.'announcement', compact('announcements'));
     }
 
-    public function details($id) {
-        $announcement = Announcement::find($id);
+    public function details($id, $slug = null)
+    {
+        $announcement = Announcement::findOrFail($id);
         return view($this->prefix.'announcement-detail', compact('announcement'));
     }
 }

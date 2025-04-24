@@ -25,8 +25,8 @@ Route::controller(BrandController::class)->group(function () {
 });
 
 Route::controller(AnnouncementController::class)->group(function () {
-    Route::get('/announcement', 'index')->name('announcement');
-    Route::get('/announcement-details/{id}', 'details')->name('announcement-details');
+    Route::get('/announcements', 'index')->name('announcements');
+    Route::get('/announcement-details/{id}-{slug}', 'details')->name('announcement-details');
 });
 Route::controller(PageController::class)->group(function () {
     Route::get('/page', 'index')->name('page');
