@@ -51,6 +51,9 @@ Route::controller(ContactController::class)->group(function () {
 });
 Route::get('/get-cities', [LocationController::class, 'getCities'])->name('get.cities');
 Route::resource('careers', CareerController::class);
+Route::get('/career/apply/{encodedId}', [CareerController::class, 'applyForm'])->name('career.apply');
+Route::post('/career/apply/submit', [CareerController::class, 'submitApplication'])->name('career.apply.submit');
+
 
 Route::get('/refresh-captcha', function() {
     return response()->json(['captcha' => captcha_src('math')]);

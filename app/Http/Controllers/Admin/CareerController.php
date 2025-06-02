@@ -18,7 +18,7 @@ class CareerController extends Controller
     }
     public function index()
     {
-        $datas = Career::with(['state', 'city','department'])->orderBy('id', 'desc')->get();
+        $datas = Career::with(['state', 'city', 'department', 'job'])->orderBy('id', 'desc')->get();
         // dd($datas);
         return view($this->prefix.'index', compact('datas'));
     }

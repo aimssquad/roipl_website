@@ -1,3 +1,95 @@
+@section('css')
+<style>
+.award-section {
+  padding: 40px 20px;
+
+  text-align: center;
+}
+
+.award-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.award-section p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #555;
+}
+
+.award-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px; /* Slightly more gap between cards */
+  padding-bottom: 10px;
+}
+
+.award-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.award-scroll::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.award-card {
+  background: #f8f9fa;
+  border: 2px solid var(--month-color, #007bff);
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 280px;   /* Increased width */
+  max-width: 320px;   /* Optional: cap it to prevent too wide */
+  flex: 1 1 300px;    /* Allow wrapping with a base size */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-5px);
+}
+
+.award-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--month-color, #007bff);
+}
+
+.award-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.award-card li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+.award-card li strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.award-card li small {
+  color: #777;
+}
+
+@media (min-width: 1200px) {
+  .award-card {
+    min-width: 320px;
+    max-width: 360px;
+  }
+}
+
+
+</style>
+
+@endsection
+
 <section id="featured-members" class="featured-members section">
     <div class="container">
 
@@ -21,7 +113,60 @@
         </div>
       </div>
     </div>
+
 </section>
+
+<section id="featured-members" class="featured-members section">
+    <div class="container">
+
+<div class="award-section">
+  <h2>🏆 Employee Awards</h2>
+  <p>Recognizing excellence across teams each month</p>
+
+  <div class="award-scroll">
+    <div class="award-card" style="--month-color:#007bff;">
+      <h3>April 2025</h3>
+      <ul>
+        <li><strong>Rahul Mehta – Sr. Executive</strong><small>Sales</small></li>
+        <li><strong>Sneha Patel – Strategist</strong><small>Marketing</small></li>
+        <li><strong>Neha Desai – Designer</strong><small>Design</small></li>
+      </ul>
+    </div>
+
+    <div class="award-card" style="--month-color:#1e7e34;">
+      <h3>May 2025</h3>
+      <ul>
+         <li><strong>Rahul Mehta – Sr. Executive</strong><small>Sales</small></li>
+        <li><strong>Sneha Patel – Strategist</strong><small>Marketing</small></li>
+        <li><strong>Neha Desai – Designer</strong><small>Design</small></li>
+      </ul>
+    </div>
+
+    <div class="award-card" style="--month-color:#007bff;">
+      <h3>April 2025</h3>
+      <ul>
+         <li><strong>Rahul Mehta – Sr. Executive</strong><small>Sales</small></li>
+        <li><strong>Sneha Patel – Strategist</strong><small>Marketing</small></li>
+        <li><strong>Neha Desai – Designer</strong><small>Design</small></li>
+      </ul>
+    </div>
+
+
+
+
+    <!-- You can add more award-card divs here -->
+  </div>
+</div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
 
 <section id="services-2" class="services-2 section" style="margin-top: -90px !important;">
 
@@ -70,9 +215,6 @@
                     <a href="{{ asset('storage/' . $vision->image) }}"  class="glightbox preview-link">
                         <div class="">
                         <div class="service-item-contents">
-                            {{-- <span class="service-item-category">{{$vision->title}}</span> --}}
-                            {{-- <h2 class="service-item-title">{{$vision->title}}</h2> --}}
-
                         </div>
                         <img src="{{ asset('storage/'.$vision->image) }}" alt="Image" class="img-fluid">
                         </div>
@@ -90,4 +232,4 @@
         </div>
       </div>
     </div>
-  </section><!-- /Services 2 Section -->
+  </section>

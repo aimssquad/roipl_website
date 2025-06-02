@@ -48,6 +48,7 @@
                                     <th>Email</th>
                                     <th>Phone</th>
                                     <th>Department</th>
+                                    <th>Job title</th>
                                     <th>State</th>
                                     <th>City</th>
                                     <th>CV</th>
@@ -63,7 +64,9 @@
                                         <td>{{ $data->name }}</td>
                                         <td>{{ $data->email }}</td>
                                         <td>{{ $data->phone_number }}</td>
-                                        <td>{{ $data->department->department_name }}</td>
+                                         <td>{{ $data->department ? $data->department->department_name : 'Not Specified' }}</td>
+                                        <td>{{ $data->job ? $data->job->title : 'Not Specified' }}</td>
+                                        </td>
                                         <td>{{ $data->state->name }}</td>
                                         <td>{{ $data->city->city }}</td>
                                         <td><a href="{{ asset('storage/' . $data->cv) }}" target="_blank" download><i class="bi bi-arrow-down-square" title="CV Download"></i></a></td>

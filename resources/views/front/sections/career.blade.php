@@ -3,6 +3,7 @@
 <section id="contact" class="contact section">
 
     <!-- Section Title -->
+
     <div class="container " data-aos="fade-up">
      <p><b>Join Our Visionary Team:</b>
 
@@ -11,6 +12,9 @@
        <br> Apply below to join the ROIPL team.
         </p><br>
     </div>
+
+    @include('front.sections.jobs')
+
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 

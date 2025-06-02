@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\EventFolderController;
 use App\Http\Controllers\Admin\EventFolderImageController;
 use App\Http\Controllers\Admin\EventImageController;
+use App\Http\Controllers\Admin\JobPostController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\TeamController;
@@ -61,6 +62,7 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
         Route::post('/export-table-data', [ExportController::class, 'exportTableData'])->name('exportTableData');
         Route::resource('brandlogos', BrandLogoController::class)->except(['show']);
         Route::resource('teams', TeamController::class)->except(['show']);
+         Route::resource('jobs', JobPostController::class);
 
         Route::resource('events', EventController::class)->except(['show']);
         Route::get('addEvent/{id}', [EventController::class, 'addEvent'])->name('add-event');

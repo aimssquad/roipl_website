@@ -27,10 +27,8 @@ class StoreCareerRequest extends FormRequest
             'email' => 'required|email',
             'state' => 'required|string|max:255',
             'city' => 'required|string|max:255',
-            'department' => 'required|string|max:255',
             'phone_number' => 'required|string|max:15',
-            'cv' => 'required|file|mimes:pdf|max:4048', // Only allow PDF uploads, max size 2MB
-            'captcha' => 'required|captcha' // CAPTCHA validation
+            'cv' => 'required|file|mimes:pdf|max:4048'
         ];
     }
 
@@ -51,7 +49,6 @@ class StoreCareerRequest extends FormRequest
     {
         return [
             'cv.mimes' => 'The CV must be a file of type: pdf.',
-            'captcha.captcha' => 'Invalid CAPTCHA.',
         ];
     }
 }
