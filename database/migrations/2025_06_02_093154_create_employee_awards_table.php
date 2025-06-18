@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('employee_awards', function (Blueprint $table) {
             $table->id();
+            $table->string('month');
+            $table->string('name');
+            $table->string('designation');
+            $table->string('team');
+            $table->string('card_color')->default('#000000');
             $table->timestamps();
         });
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AwardController;
 use App\Http\Controllers\Admin\BrandLogoController;
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\ContactController;
@@ -62,7 +63,8 @@ Route::middleware(['admin_auth:admin,manager,hr'])->prefix('/admin/')->name('adm
         Route::post('/export-table-data', [ExportController::class, 'exportTableData'])->name('exportTableData');
         Route::resource('brandlogos', BrandLogoController::class)->except(['show']);
         Route::resource('teams', TeamController::class)->except(['show']);
-         Route::resource('jobs', JobPostController::class);
+        Route::resource('jobs', JobPostController::class);
+        Route::resource('awards', AwardController::class);
 
         Route::resource('events', EventController::class)->except(['show']);
         Route::get('addEvent/{id}', [EventController::class, 'addEvent'])->name('add-event');

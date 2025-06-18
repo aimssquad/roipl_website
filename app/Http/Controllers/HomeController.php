@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Brand;
 use App\Models\BrandLogo;
+use App\Models\EmployeeAward;
 use App\Models\EventFolder;
 use App\Models\EventFolderImage;
 use App\Models\Event;
@@ -56,8 +57,8 @@ class HomeController extends Controller
 
     }
     public function teams(Request $request){
-
+        $awards = EmployeeAward::orderBy('month', 'desc')->get();
         $team = Team::orderBy('order_by', 'asc')->get();
-        return view($this->prefix.'teams',compact('team'));
+        return view($this->prefix.'teams',compact('team','awards'));
     }
 }

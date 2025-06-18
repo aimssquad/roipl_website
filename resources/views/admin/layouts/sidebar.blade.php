@@ -69,6 +69,12 @@
                 <span>Teams</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link @if(Request::segment(2) != 'awards') collapsed @endif" href="{{ route('admin.awards.index') }}">
+                <i class="bi bi-card-list"></i>
+                <span>Awards</span>
+            </a>
+        </li>
 
          <li class="nav-item">
             <a class="nav-link @if(Request::segment(2) != 'jobs') collapsed @endif" href="{{ route('admin.jobs.index') }}">

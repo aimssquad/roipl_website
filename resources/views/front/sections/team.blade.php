@@ -35,17 +35,26 @@
 }
 
 .award-card {
-  background: #f8f9fa;
-  border: 2px solid var(--month-color, #007bff);
-  border-radius: 12px;
-  padding: 16px;
-  min-width: 280px;   /* Increased width */
-  max-width: 320px;   /* Optional: cap it to prevent too wide */
-  flex: 1 1 300px;    /* Allow wrapping with a base size */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+    background: #f8f9fa;
+    border: 2px solid var(--month-color, #007bff);
+    border-radius: 12px;
+    padding: 16px;
+    width: 400px;
+    height: 300px;
+    scroll-behavior: auto;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow-y: scroll;        /* allow vertical scroll */
+    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.award-card::-webkit-scrollbar {
+    display: none;
+}
 .award-card:hover {
   transform: translateY(-5px);
 }
@@ -116,50 +125,41 @@
 
 </section>
 
-<section id="featured-members" class="featured-members section">
+@if($awards->count())
+<section id="featured-members" class="featured-members section" style="margin-top: -60px  !important;">
     <div class="container">
+        <div class="award-section">
+            <h2>🏆 Employee Awards</h2>
+            <p>Recognizing excellence across teams each month</p>
 
-<div class="award-section">
-  <h2>🏆 Employee Awards</h2>
-  <p>Recognizing excellence across teams each month</p>
+            <div class="award-scroll">
+                @php
+                    $grouped = $awards->groupBy('month');
+                @endphp
 
-  <div class="award-scroll">
-    <div class="award-card" style="--month-color:#007bff;">
-      <h3>April 2025</h3>
-      <ul>
-        <li><strong>Rahul Mehta – Sr. Executive</strong><small>Sales</small></li>
-        <li><strong>Sneha Patel – Strategist</strong><small>Marketing</small></li>
-        <li><strong>Neha Desai – Designer</strong><small>Design</small></li>
-      </ul>
+                @foreach($grouped as $month => $entries)
+                    @php
+                        $first = $entries->first();
+                        $color = $first->card_color ?? '#007bff';
+                    @endphp
+                    <div class="award-card" style="--month-color: {{ $color }};">
+                        <h3>{{ $month }}</h3>
+                        <ul>
+                            @foreach($entries as $entry)
+                                <li>
+                                    <strong style="color: {{ $entry->card_color ?? '#000' }};">{{ $entry->name }} – {{ $entry->designation }}</strong>
+                                    <small>{{ $entry->team }}</small>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endforeach
+            </div>
+        </div>
     </div>
-
-    <div class="award-card" style="--month-color:#1e7e34;">
-      <h3>May 2025</h3>
-      <ul>
-         <li><strong>Rahul Mehta – Sr. Executive</strong><small>Sales</small></li>
-        <li><strong>Sneha Patel – Strategist</strong><small>Marketing</small></li>
-        <li><strong>Neha Desai – Designer</strong><small>Design</small></li>
-      </ul>
-    </div>
-
-    <div class="award-card" style="--month-color:#007bff;">
-      <h3>April 2025</h3>
-      <ul>
-         <li><strong>Rahul Mehta – Sr. Executive</strong><small>Sales</small></li>
-        <li><strong>Sneha Patel – Strategist</strong><small>Marketing</small></li>
-        <li><strong>Neha Desai – Designer</strong><small>Design</small></li>
-      </ul>
-    </div>
-
-
-
-
-    <!-- You can add more award-card divs here -->
-  </div>
-</div>
-  </div>
-
 </section>
+@endif
+
 
 
 
